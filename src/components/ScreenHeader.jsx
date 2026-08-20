@@ -4,7 +4,7 @@ export default function ScreenHeader({ title, onBack }) {
   const { lang, toggleLang } = useLanguage();
 
   return (
-    <div className="bg-[#0B2A4A] px-4 pt-6 pb-4 text-white flex items-center gap-3 sticky top-0 z-10">
+    <div className="bg-[#0B2A4A] px-4 pt-5 pb-3 text-white flex items-center gap-3 sticky top-0 z-10">
       <button
         onClick={onBack}
         aria-label="Back"

@@ -6,20 +6,14 @@
 //   - Edit trip-data.json for agenda/attendees/room share/travel notices —
 //     content.js and seedData.js both read from it directly.
 //   - Edit colors.js (COLORS constants) for branding colors.
-//   - Attendees/Room Share/Photo Walls/Chat are admin-editable and persisted
-//     to localStorage per-device only (see store.js) until a real backend
-//     (Firebase) is wired up.
 // =============================================================================
 
 import { useState } from 'react';
 import { LanguageProvider } from './LanguageContext';
-import { AdminProvider } from './AdminContext';
 import { useAutoReload } from './hooks/useAutoReload';
 import BottomNav from './components/BottomNav';
 import Home from './components/Home';
 import Contact from './components/Contact';
-import Photos from './components/Photos';
-import Chat from './components/Chat';
 import Agenda from './components/Agenda';
 import Attendees from './components/Attendees';
 import SportProgram from './components/SportProgram';
@@ -65,12 +59,6 @@ function AppShell() {
       case 'contact':
         content = <Contact />;
         break;
-      case 'photos':
-        content = <Photos />;
-        break;
-      case 'chat':
-        content = <Chat />;
-        break;
       case 'home':
       default:
         content = <Home onNavigateTile={handleNavigateTile} />;
@@ -92,9 +80,7 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <AdminProvider>
-        <AppShell />
-      </AdminProvider>
+      <AppShell />
     </LanguageProvider>
   );
 }

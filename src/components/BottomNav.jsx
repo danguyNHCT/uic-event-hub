@@ -3,8 +3,6 @@ import { useLanguage } from '../LanguageContext';
 const TABS = [
   { id: 'home', icon: '🏠', label: { en: 'Home', vi: 'Trang chủ' } },
   { id: 'contact', icon: '☎️', label: { en: 'Contact', vi: 'Liên hệ' } },
-  { id: 'photos', icon: '📷', label: { en: 'Photo Walls', vi: 'Tường ảnh' } },
-  { id: 'chat', icon: '💬', label: { en: 'Chat', vi: 'Trò chuyện' } },
 ];
 
 export default function BottomNav({ activeTab, onSelectTab }) {

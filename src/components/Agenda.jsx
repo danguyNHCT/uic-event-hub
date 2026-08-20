@@ -46,41 +46,28 @@ function GeneralAgendaCell({ text }) {
   );
 }
 
+// Vertical, one-day-per-card layout — avoids the horizontal scroll a
+// day-columns table would need on a phone-width viewport.
 function GeneralAgendaTable() {
-  const { t } = useLanguage();
   return (
-    <div className="overflow-x-auto -mx-4 px-4">
-      <table className="border-separate border-spacing-0 min-w-[660px] w-full">
-        <thead>
-          <tr>
-            <th className="sticky left-0 bg-[#F7F8FA] text-left text-[11px] font-semibold text-gray-400 uppercase p-2 w-[80px]">
-              {t({ en: 'Period', vi: 'Buổi' })}
-            </th>
-            {GENERAL_AGENDA.days.map((day) => (
-              <th
-                key={day}
-                className="text-left text-[11px] font-semibold text-gray-400 uppercase p-2 min-w-[150px]"
-              >
-                {day}
-              </th>
+    <div className="flex flex-col gap-2.5">
+      {GENERAL_AGENDA.days.map((day, dayIdx) => (
+        <div key={day} className="bg-white rounded-2xl shadow-sm p-3">
+          <h3 className="text-xs font-bold text-[#0B2A4A] mb-2">{day}</h3>
+          <div className="flex flex-col gap-2">
+            {GENERAL_AGENDA.rows.map((row) => (
+              <div key={row.period} className="flex gap-2">
+                <span className="text-[10px] font-semibold text-gray-400 uppercase w-14 shrink-0 pt-0.5">
+                  {row.period}
+                </span>
+                <div className="flex-1">
+                  <GeneralAgendaCell text={row.cells[dayIdx]} />
+                </div>
+              </div>
             ))}
-          </tr>
-        </thead>
-        <tbody>
-          {GENERAL_AGENDA.rows.map((row) => (
-            <tr key={row.period}>
-              <td className="sticky left-0 bg-white align-top text-xs font-bold text-[#0B2A4A] p-2 border-t border-gray-100">
-                {row.period}
-              </td>
-              {row.cells.map((cell, idx) => (
-                <td key={idx} className="align-top bg-white p-2 border-t border-l border-gray-100">
-                  <GeneralAgendaCell text={cell} />
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -103,15 +90,15 @@ function DetailedAgendaTimeline({ trip }) {
   const groups = groupRowsByDate(trip.rows);
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       {groups.map((group) => (
         <div key={group.date}>
-          <h3 className="text-sm font-bold text-[#0B2A4A] mb-2 whitespace-pre-line leading-snug">
+          <h3 className="text-sm font-bold text-[#0B2A4A] mb-1.5 whitespace-pre-line leading-snug">
             {group.date}
           </h3>
           <ol className="relative border-l-2 border-[#0B2A4A]/20 ml-2">
             {group.items.map((row, idx) => (
-              <li key={idx} className="mb-4 ml-5 last:mb-0">
+              <li key={idx} className="mb-3 ml-5 last:mb-0">
                 <span className="absolute -left-[7px] w-3.5 h-3.5 rounded-full bg-[#C9A227] border-2 border-white" />
                 <div className="flex items-center gap-2 mb-1 flex-wrap">
                   <span className="text-xs font-semibold text-[#3B82C4]">
@@ -123,7 +110,7 @@ function DetailedAgendaTimeline({ trip }) {
                     {row.group}
                   </span>
                 </div>
-                <div className="bg-white rounded-xl shadow-sm p-3.5">
+                <div className="bg-white rounded-xl shadow-sm p-3">
                   {row.activity ? (
                     <div className="font-semibold text-[#0B2A4A] whitespace-pre-line">{row.activity}</div>
                   ) : (
@@ -152,13 +139,13 @@ export default function Agenda({ onBack }) {
     <div>
       <ScreenHeader title={t({ en: 'Agenda', vi: 'Chương trình' })} onBack={onBack} />
 
-      <div className="px-4 pt-4">
+      <div className="px-4 pt-3">
         <div className="flex bg-gray-100 rounded-full p-1 gap-1">
           {SUB_TABS.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setSubTab(tab.id)}
-              className={`flex-1 text-xs font-semibold rounded-full py-2 transition-colors ${
+              className={`flex-1 text-xs font-semibold rounded-full py-1.5 transition-colors ${
                 subTab === tab.id ? 'bg-[#0B2A4A] text-white' : 'text-gray-500'
               }`}
             >
@@ -168,7 +155,7 @@ export default function Agenda({ onBack }) {
         </div>
       </div>
 
-      <div className="px-4 pt-5 pb-6">
+      <div className="px-4 pt-3 pb-4">
         {subTab === 'general' && <GeneralAgendaTable />}
         {subTab === 'trip1' && <DetailedAgendaTimeline trip={DETAILED_AGENDA.trip1} />}
         {subTab === 'trip2' && <DetailedAgendaTimeline trip={DETAILED_AGENDA.trip2} />}

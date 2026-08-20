@@ -4,7 +4,9 @@
       "PowerShell(npm run2)",
       "PowerShell(npm run *)",
       "PowerShell(npx oxlint src 2>&1 | Select-Object -Last 60)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(git status *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5175/ --max-time 5)"
     ]
   }
 }

@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <div>
       <Header title={t({ en: 'Contact', vi: 'Liên hệ' })} />
-      <div className="flex flex-col items-center justify-center text-center px-8 py-16 gap-3">
+      <div className="flex flex-col items-center justify-center text-center px-8 py-10 gap-2.5">
         <span className="text-5xl">☎️</span>
         <p className="font-semibold text-[#0B2A4A]">
           {t({ en: 'Contact details coming soon', vi: 'Thông tin liên hệ sẽ được cập nhật sớm' })}

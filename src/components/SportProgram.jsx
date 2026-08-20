@@ -16,8 +16,8 @@ export default function SportProgram({ onBack }) {
   return (
     <div>
       <ScreenHeader title={t({ en: 'Sport Program', vi: 'Chương trình thể thao' })} onBack={onBack} />
-      <div className="px-4 pt-5 pb-6">
-        <p className="text-xs text-gray-500 mb-4">
+      <div className="px-4 pt-4 pb-4">
+        <p className="text-xs text-gray-500 mb-3">
           {t({ en: 'Same schedule for both Trip 1 and Trip 2', vi: 'Lịch giống nhau cho cả Đợt 1 và Đợt 2' })}
         </p>
         {entry ? (
