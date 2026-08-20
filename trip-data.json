@@ -1,0 +1,2768 @@
+{
+  "tripInfo": {
+    "name": "UIC Company Trip 2026",
+    "destination": "Quy Nhon",
+    "dateRange": "4th - 7th September 2026",
+    "welcomeMessage": "Welcome to one of the standout events of 2026!"
+  },
+  "generalAgenda": {
+    "days": [
+      "Fri, 4 Sep",
+      "Sat, 5 Sep",
+      "Sun, 6 Sep",
+      "Mon, 7 Sep"
+    ],
+    "rows": [
+      {
+        "period": "Morning",
+        "cells": [
+          "GROUP 1: ARRIVE AT QUY NHON",
+          "GROUP 1: LOCAL TOUR\nGROUP 2: ARRIVE AT QUY NHON",
+          "GROUP 1: FREE & EASY\nGROUP 2: LOCAL TOUR",
+          "GROUP 2: FREE & EASY"
+        ]
+      },
+      {
+        "period": "Afternoon",
+        "cells": [
+          "GROUP 1: FREE & EASY",
+          "SPORT ACTIVITIES",
+          "GROUP 1: DEPARTURE FROM QUY NHON\nGROUP 2: FREE & EASY",
+          "GROUP 2: DEPARTURE FROM QUY NHON"
+        ]
+      },
+      {
+        "period": "Evening",
+        "cells": [
+          "GROUP 1: FREE & EASY",
+          "GALA DINNER",
+          "GROUP 2: FREE & EASY",
+          "END TRIP"
+        ]
+      }
+    ]
+  },
+  "detailedAgenda": {
+    "trip1": {
+      "label": "Trip 1 (04 Sep - 06 Sep 2026)",
+      "rows": [
+        {
+          "date": "Friday\n04/09",
+          "time": "04:00",
+          "group": "HCMC",
+          "activity": "Pick up staffs at Vincom Center to Tan Son Nhat Airport",
+          "note": "Flight No. VN1392, depart 06:00 AM"
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "06:00",
+          "group": "Hanoi",
+          "activity": "Pick up staffs at Tungshing to Noi Bai Airport",
+          "note": "Flight No. VN1629, depart 08:30 AM"
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "06:00",
+          "group": "Danang",
+          "activity": null,
+          "note": null
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "07:10 - 11:30",
+          "group": "HCMC",
+          "activity": "Arrive at Quy Nhon\nHaving Breakfast \nSightseeing tour of Ghenh Rang Tien Sa tourist area",
+          "note": "Restaurant at Phu Cat Airport"
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "10:30",
+          "group": "Hanoi",
+          "activity": "Arrive at Quy Nhon",
+          "note": null
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": null,
+          "group": "Danang",
+          "activity": null,
+          "note": null
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "12:00",
+          "group": "All",
+          "activity": "Lunch",
+          "note": "Restaurant: Ẩm thực Việt"
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "14:00",
+          "group": "All",
+          "activity": "Hotel Check-in",
+          "note": "FLC Quy Nhơn Beach & Golf Resort"
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "14:30 - 18:00",
+          "group": "All",
+          "activity": "Free & Easy",
+          "note": null
+        },
+        {
+          "date": "Friday\n04/09",
+          "time": "18:30",
+          "group": "All",
+          "activity": "Dinner",
+          "note": "Restaurant: Hướng Dương"
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "07:00",
+          "group": "All",
+          "activity": "Breakfast",
+          "note": "Buffet at Hotel"
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "08:00",
+          "group": "All",
+          "activity": "Local tour to Ky Co Beach",
+          "note": "Notes: Prepare suitable outfits/ belongings for sightseeing, swimming, and snorkeling activities."
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "11:30",
+          "group": "All",
+          "activity": "Lunch",
+          "note": "Local restaurant at Ky Co Beach"
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "13:30 - 17:00",
+          "group": "All",
+          "activity": "Pickleball Tournament 2026",
+          "note": "FLC pickleball courts area"
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "18:30",
+          "group": "All",
+          "activity": "GALA Dinner",
+          "note": "FLC Ruby Hall"
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "07:00 - 11:00",
+          "group": "All",
+          "activity": "Breakfast & Freetime",
+          "note": "Buffet at Hotel"
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "11:00",
+          "group": "All",
+          "activity": "Hotel Check-out",
+          "note": null
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "12:00",
+          "group": "All",
+          "activity": "Lunch",
+          "note": "- Hoai Huong Restaurant\n* After lunch\n- HCM team: go to airport\n- Hanoi team: go to shopping and wait for flght"
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "15:35",
+          "group": "HCMC",
+          "activity": "Departure from Quy Nhon to HCMC",
+          "note": "- Flight No. \n- Upon landing, vehicle picks up staffs to return to office"
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "19:20",
+          "group": "Hanoi",
+          "activity": "Departure from Quy Nhon to Hanoi",
+          "note": "- Flight No. \n- Upon landing, vehicle picks up staffs to return to office"
+        }
+      ]
+    },
+    "trip2": {
+      "label": "Trip 2 (05 Sep - 07 Sep 2026)",
+      "rows": [
+        {
+          "date": "Saturday\n05/09",
+          "time": "03:45",
+          "group": "Hanoi",
+          "activity": "Pick up staffs at Tungshing to Noi Bai Airport",
+          "note": "Flight No."
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "04:00",
+          "group": "HCMC",
+          "activity": "Pick up staffs at Vincom Center to Tan Son Nhat Airport",
+          "note": "Flight No."
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "8:15 - 11:30",
+          "group": "All",
+          "activity": "Arrive at Quy Nhon\nHaving Breakfast \nSightseeing tour of Ghenh Rang Tien Sa tourist area",
+          "note": "Restaurant at Phu Cat Airport"
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "12:00",
+          "group": "All",
+          "activity": "Lunch",
+          "note": null
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "14:00",
+          "group": "All",
+          "activity": "Hotel Check-in",
+          "note": "FLC Quy Nhơn Beach & Golf Resort"
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "13:30 - 17:00",
+          "group": "All",
+          "activity": "Pickleball Tournament 2026",
+          "note": "FLC pickleball courts area"
+        },
+        {
+          "date": "Saturday\n05/09",
+          "time": "18:30",
+          "group": "All",
+          "activity": "GALA Dinner",
+          "note": "FLC Ruby Hall"
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "07:00",
+          "group": "All",
+          "activity": "Breakfast",
+          "note": "Buffet at Hotel"
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "08:00 - 11:30",
+          "group": "All",
+          "activity": "Local tour to Ky Co Beach",
+          "note": "Notes: Prepare suitable outfits/ belongings for sightseeing, swimming, and snorkeling activities."
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "12:00",
+          "group": "All",
+          "activity": "Lunch",
+          "note": "Local restaurant at Ky Co Beach"
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "13:00 - 18:00",
+          "group": "All",
+          "activity": "Free and Easy",
+          "note": null
+        },
+        {
+          "date": "Sunday\n06/09",
+          "time": "18:30",
+          "group": "All",
+          "activity": "Dinner",
+          "note": "Restaurant: Hướng Dương"
+        },
+        {
+          "date": "Monday\n07/09",
+          "time": "07:00 - 10:30",
+          "group": "All",
+          "activity": "Breakfast & Freetime",
+          "note": "Buffet at Hotel"
+        },
+        {
+          "date": "Monday\n07/09",
+          "time": "11:00",
+          "group": "All",
+          "activity": "Hotel Check-out",
+          "note": null
+        },
+        {
+          "date": "Monday\n07/09",
+          "time": "12:00",
+          "group": "All",
+          "activity": "Lunch",
+          "note": "- Hoai Huong Restaurant\n* After lunch:\n- HCM team: go to airport\n- HN team: go to shopping and waiting for flight"
+        },
+        {
+          "date": "Monday\n07/09",
+          "time": "19:20",
+          "group": "Hanoi",
+          "activity": "Departure from Quy Nhon to HCMC",
+          "note": "- Flight No. \n- Upon landing, vehicle picks up staffs to return to office"
+        },
+        {
+          "date": "Monday\n07/09",
+          "time": "15:35",
+          "group": "HCMC",
+          "activity": "Departure from Quy Nhon to Hanoi",
+          "note": "- Flight No. \n- Upon landing, vehicle picks up staffs to return to office"
+        }
+      ]
+    }
+  },
+  "attendees": {
+    "trip1": {
+      "bookedByUIC": [
+        {
+          "no": 1,
+          "empCode": "E499",
+          "name": "Vu Van Anh",
+          "office": "HO",
+          "dept": "CP",
+          "isFamily": false
+        },
+        {
+          "no": 2,
+          "empCode": "E514",
+          "name": "Tran Phuong Quynh",
+          "office": "HO",
+          "dept": "CP",
+          "isFamily": false
+        },
+        {
+          "no": 3,
+          "empCode": "E073",
+          "name": "Pham Tuyet Nhung",
+          "office": "HO",
+          "dept": "Internal Auditing",
+          "isFamily": false
+        },
+        {
+          "no": 4,
+          "empCode": "E478",
+          "name": "Masanori Tsuji",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 5,
+          "empCode": "E025",
+          "name": "Vu Thi Hoang Phuong",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 6,
+          "empCode": "E540",
+          "name": "Nguyen Phuong Tu",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 7,
+          "empCode": "E529",
+          "name": "Do Ngoc Anh",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 8,
+          "empCode": "E536",
+          "name": "Le Dieu Linh",
+          "office": "HO",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 9,
+          "empCode": "E528",
+          "name": "Duong Thi Linh Linh",
+          "office": "HO",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 10,
+          "empCode": "E539",
+          "name": "Park Mi Young",
+          "office": "HO",
+          "dept": "MKT1-KB",
+          "isFamily": false
+        },
+        {
+          "no": 11,
+          "empCode": "E416",
+          "name": "Nguyen Huy Khanh",
+          "office": "HO",
+          "dept": "MKT1-KB",
+          "isFamily": false
+        },
+        {
+          "no": 12,
+          "empCode": "E381",
+          "name": "Tran Huy Duc",
+          "office": "HO",
+          "dept": "BD",
+          "isFamily": false
+        },
+        {
+          "no": 13,
+          "empCode": "E099",
+          "name": "Nguyen Thi Thanh",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 14,
+          "empCode": "E433",
+          "name": "Khuong Thuc Hien",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 15,
+          "empCode": "E450",
+          "name": "Tran Thi Huong",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 16,
+          "empCode": "E464",
+          "name": "Pham Thi Quynh",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 17,
+          "empCode": "E538",
+          "name": "Nguyen Hoang The Anh",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 18,
+          "empCode": "E537",
+          "name": "Dao Thu Ha",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 19,
+          "empCode": "E527",
+          "name": "Nguyen Mai Huong",
+          "office": "HO",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 20,
+          "empCode": "E501",
+          "name": "Le Thi Van Trang",
+          "office": "HO",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 21,
+          "empCode": "E532",
+          "name": "Dang Thu Trang",
+          "office": "HO",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 22,
+          "empCode": "E140",
+          "name": "Tran Hoai Nam",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 23,
+          "empCode": "E296",
+          "name": "Lai Duc Chung",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 24,
+          "empCode": "E388",
+          "name": "Nguyen Thuy Duong",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 25,
+          "empCode": "E045",
+          "name": "Bui Phuong Mai",
+          "office": "HO",
+          "dept": "IT",
+          "isFamily": false
+        },
+        {
+          "no": 26,
+          "empCode": "E213",
+          "name": "Nguyen Thi Hai Yen",
+          "office": "HO",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 27,
+          "empCode": "E519",
+          "name": "Nguyen Thi Phuong Thao",
+          "office": "HO",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 28,
+          "empCode": "E479",
+          "name": "Tamura Masashi",
+          "office": "HCM",
+          "dept": "Mngt",
+          "isFamily": false
+        },
+        {
+          "no": 29,
+          "empCode": "E132",
+          "name": "Le Thi Thu Thuy",
+          "office": "HCM",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 30,
+          "empCode": "E494",
+          "name": "Tran Ha Vi",
+          "office": "HCM",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 31,
+          "empCode": "E534",
+          "name": "Nguyen Duc Thang",
+          "office": "HCM",
+          "dept": "MKT1 (KB)",
+          "isFamily": false
+        },
+        {
+          "no": 32,
+          "empCode": "E544",
+          "name": "Nguyen Hoang Yen Nhi",
+          "office": "HCM",
+          "dept": "MKT1 (KB)",
+          "isFamily": false
+        },
+        {
+          "no": 33,
+          "empCode": "E507",
+          "name": "Hisano Tetsuya",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 34,
+          "empCode": "E156",
+          "name": "Pham Dao Thuy Hang",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 35,
+          "empCode": "E543",
+          "name": "Sakai Shotaro",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 36,
+          "empCode": "E541",
+          "name": "Le Thi Thuy Trang",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 37,
+          "empCode": "E287",
+          "name": "Dinh Thi Hoai",
+          "office": "HCM",
+          "dept": "BD",
+          "isFamily": false
+        },
+        {
+          "no": 38,
+          "empCode": "E535",
+          "name": "Nguyen Thi Kieu Oanh",
+          "office": "HCM",
+          "dept": "BD",
+          "isFamily": false
+        },
+        {
+          "no": 39,
+          "empCode": "E270",
+          "name": "Vo Dai Quang",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 40,
+          "empCode": "E322",
+          "name": "Le Thi Phuong Oanh",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 41,
+          "empCode": "E155",
+          "name": "Nguyen Thanh Binh",
+          "office": "HCM",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 42,
+          "empCode": "E476",
+          "name": "Nguyen Tran Hung",
+          "office": "HCM",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 43,
+          "empCode": "E426",
+          "name": "Tran Thi Thu Thao",
+          "office": "HCM",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 44,
+          "empCode": "E481",
+          "name": "Tran Mai Linh",
+          "office": "HCM",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 45,
+          "empCode": "E447",
+          "name": "Pham Huy Minh",
+          "office": "HCM",
+          "dept": "IT",
+          "isFamily": false
+        }
+      ],
+      "selfBooking": [
+        {
+          "no": 1,
+          "empCode": "E385",
+          "name": "Nguyen Thi Thuy",
+          "office": "HO",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 2,
+          "empCode": "E427",
+          "name": "Nguyen Hong Minh",
+          "office": "HO",
+          "dept": "Mngt",
+          "isFamily": false
+        },
+        {
+          "no": 3,
+          "empCode": "E001",
+          "name": "Nguyen Thanh Nam",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 4,
+          "empCode": "E486",
+          "name": "Tran Quang Thai",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 5,
+          "empCode": "E150",
+          "name": "Le Thi Thu Phuong",
+          "office": "HCM",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 6,
+          "empCode": null,
+          "name": "Hoàng Văn Mạnh",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 7,
+          "empCode": null,
+          "name": "Hoàng Phương Anh",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 8,
+          "empCode": null,
+          "name": "Hoàng Nguyên Khôi",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 9,
+          "empCode": "E496",
+          "name": "Tong Chau Viet Ha",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 10,
+          "empCode": null,
+          "name": "Tong Chau Thuy Lam",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 11,
+          "empCode": "E390",
+          "name": "Ma Thi Cam Duyen",
+          "office": "HCM",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 12,
+          "empCode": "E510",
+          "name": "Le Tran Khanh Vy",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 13,
+          "empCode": null,
+          "name": "Vũ Lê Khôi Nguyên",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 14,
+          "empCode": "E328",
+          "name": "Liem Tu Quynh",
+          "office": "HCM",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 15,
+          "empCode": null,
+          "name": "Nguyễn Ngọc Nhã Tuệ",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        }
+      ]
+    },
+    "trip2": {
+      "bookedByUIC": [
+        {
+          "no": 1,
+          "empCode": "E487",
+          "name": "Than Thi Thanh Hai",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 2,
+          "empCode": "E203",
+          "name": "Mai Thi Hao",
+          "office": "HO",
+          "dept": "BD",
+          "isFamily": false
+        },
+        {
+          "no": 3,
+          "empCode": "E026",
+          "name": "Ta Thi Minh Thao",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 4,
+          "empCode": "E035",
+          "name": "Duong Thi Thu Nga",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 5,
+          "empCode": "E019",
+          "name": "Nguyen Thi Phuong Thanh",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 6,
+          "empCode": "E087",
+          "name": "Ngo Minh Ha",
+          "office": "HO",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 7,
+          "empCode": "E170",
+          "name": "Le Minh Thuy",
+          "office": "HO",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 8,
+          "empCode": "E139",
+          "name": "Tran Ha Phuong",
+          "office": "HO",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 9,
+          "empCode": "E480",
+          "name": "Tran Minh Hai",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 10,
+          "empCode": "E249",
+          "name": "Nguyen Dinh Quyen",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 11,
+          "empCode": "E178",
+          "name": "Nguyen Van Minh",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 12,
+          "empCode": "E298",
+          "name": "Nong Tran Quang",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 13,
+          "empCode": "E520",
+          "name": "Nguyen Kim Oanh",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 14,
+          "empCode": "E468",
+          "name": "Nguyen Thai Binh",
+          "office": "HO",
+          "dept": "IT",
+          "isFamily": false
+        },
+        {
+          "no": 15,
+          "empCode": "E047",
+          "name": "Doan Duc Hanh",
+          "office": "HO",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 16,
+          "empCode": "E517",
+          "name": "Nguyen Tien Dau",
+          "office": "HO",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 17,
+          "empCode": "E081",
+          "name": "La Duc Chinh",
+          "office": "HO",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 18,
+          "empCode": "E149",
+          "name": "Truong Thanh Cam Tu",
+          "office": "HCM",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 19,
+          "empCode": "E163",
+          "name": "Nguyen Huu Phuoc",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 20,
+          "empCode": "E350",
+          "name": "Nguyen Thi Hai Yen",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 21,
+          "empCode": "E327",
+          "name": "Tran Thi Tham",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 22,
+          "empCode": "E490",
+          "name": "Nguyen Tran Phuong Linh",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 23,
+          "empCode": "E524",
+          "name": "Banh Van Loi",
+          "office": "HCM",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 24,
+          "empCode": "E467",
+          "name": "Le Thi Thanh Truc",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 25,
+          "empCode": "E503",
+          "name": "Tran Ngoc Phuong",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 26,
+          "empCode": "E460",
+          "name": "Cao Anh Dung",
+          "office": "HCM",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 27,
+          "empCode": "E046",
+          "name": "Tran Chau Hien",
+          "office": "HCM",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 28,
+          "empCode": "E031",
+          "name": "Nguyen Thi Quynh Anh",
+          "office": "HCM",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 29,
+          "empCode": "E314",
+          "name": "Huynh My Duyen Hong",
+          "office": "HCM",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 30,
+          "empCode": "E439",
+          "name": "Pham Huynh Phuong Trinh",
+          "office": "HCM",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 31,
+          "empCode": "E461",
+          "name": "Vo Hoai Bao Ngoc",
+          "office": "HCM",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 32,
+          "empCode": "E475",
+          "name": "Nguyen Huynh Yen Thuy",
+          "office": "HCM",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 33,
+          "empCode": "E160",
+          "name": "Do Thanh Tuan",
+          "office": "HCM",
+          "dept": "BD",
+          "isFamily": false
+        },
+        {
+          "no": 34,
+          "empCode": "E204",
+          "name": "Nguyen Thi Yen Ha",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        }
+      ],
+      "selfBooking": [
+        {
+          "no": 1,
+          "empCode": "E413",
+          "name": "Le Quynh Trang",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 2,
+          "empCode": "E329",
+          "name": "Pham Hong Nhung",
+          "office": "HO",
+          "dept": "GAHR",
+          "isFamily": false
+        },
+        {
+          "no": 3,
+          "empCode": "E421",
+          "name": "Nguyen Khanh Hien",
+          "office": "HO",
+          "dept": "CP",
+          "isFamily": false
+        },
+        {
+          "no": 4,
+          "empCode": "E419",
+          "name": "Vuong Mai Linh",
+          "office": "HO",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 5,
+          "empCode": "E391",
+          "name": "Nguyen Le Thuy",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 6,
+          "empCode": "E288",
+          "name": "Hoang Kieu Ngan",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 7,
+          "empCode": "E477",
+          "name": "Ha Thu Trang",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 8,
+          "empCode": "E471",
+          "name": "Ly Thi Ngoc Huyen",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 9,
+          "empCode": "E492",
+          "name": "Nguyen Phuong Thao",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 10,
+          "empCode": "E488",
+          "name": "Nguyen Thi Phuong Anh",
+          "office": "HO",
+          "dept": "UWRI",
+          "isFamily": false
+        },
+        {
+          "no": 11,
+          "empCode": "E010",
+          "name": "Ngo Thi Lan Phuong",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 12,
+          "empCode": "E428",
+          "name": "Nguyen Thi Ly",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 13,
+          "empCode": "E111",
+          "name": "Pham Hong Yen",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 14,
+          "empCode": "E231",
+          "name": "Bui Thi Kim Lien",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 15,
+          "empCode": "E498",
+          "name": "Trieu Khanh Huyen",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 16,
+          "empCode": "E509",
+          "name": "Nguyen Minh Phuong",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 17,
+          "empCode": "E502",
+          "name": "Nguyen Thi Ha My",
+          "office": "HO",
+          "dept": "BD",
+          "isFamily": false
+        },
+        {
+          "no": 18,
+          "empCode": "E504",
+          "name": "Nguyen Thi Hong Nhung",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 19,
+          "empCode": "E485",
+          "name": "Do Hong Nhung",
+          "office": "HO",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 20,
+          "empCode": "E358",
+          "name": "Hoang Thi Anh Tho",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 21,
+          "empCode": "E500",
+          "name": "Nguyen Phuong Thao",
+          "office": "HO",
+          "dept": "MKT2",
+          "isFamily": false
+        },
+        {
+          "no": 22,
+          "empCode": "E221",
+          "name": "Dang Thi Hong Mai",
+          "office": "HO",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 23,
+          "empCode": "E533",
+          "name": "Nguyen Thi Thi",
+          "office": "HO",
+          "dept": "IT",
+          "isFamily": false
+        },
+        {
+          "no": 24,
+          "empCode": "E533",
+          "name": "Lê Ngọc Bích Diệp",
+          "office": "HO",
+          "dept": null,
+          "isFamily": false
+        },
+        {
+          "no": 25,
+          "empCode": "E136",
+          "name": "Nguyen Cam Tu",
+          "office": "HO",
+          "dept": "BD",
+          "isFamily": false
+        },
+        {
+          "no": 26,
+          "empCode": "E454",
+          "name": "Nguyen Thi Minh Phuong",
+          "office": "HO",
+          "dept": "IT",
+          "isFamily": false
+        },
+        {
+          "no": 27,
+          "empCode": "E431",
+          "name": "Le Hoang Viet",
+          "office": "HO",
+          "dept": "IT",
+          "isFamily": false
+        },
+        {
+          "no": 28,
+          "empCode": "E002",
+          "name": "Do Quang Huy",
+          "office": "HO",
+          "dept": "Risk Management",
+          "isFamily": false
+        },
+        {
+          "no": 29,
+          "empCode": "E469",
+          "name": "Quach Minh Hoang Long",
+          "office": "HO",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 30,
+          "empCode": "E337",
+          "name": "Tran Quang Khanh",
+          "office": "HCM",
+          "dept": "Claims",
+          "isFamily": false
+        },
+        {
+          "no": 31,
+          "empCode": "E204",
+          "name": "Nguyen Thi Yen Ha",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 32,
+          "empCode": "E354",
+          "name": "Huynh Thi Hong Nhu",
+          "office": "HCM",
+          "dept": "PA",
+          "isFamily": false
+        },
+        {
+          "no": 33,
+          "empCode": "E420",
+          "name": "Nguyen Thi Bich Thuy",
+          "office": "HCM",
+          "dept": "FA",
+          "isFamily": false
+        },
+        {
+          "no": 34,
+          "empCode": null,
+          "name": "Dương Ninh Đức Vũ",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 35,
+          "empCode": null,
+          "name": "Dương Lam Vy",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 36,
+          "empCode": null,
+          "name": "Dương Vân Nhi",
+          "office": null,
+          "dept": null,
+          "isFamily": true
+        },
+        {
+          "no": 37,
+          "empCode": "E457",
+          "name": "Lu Minh Anh",
+          "office": "HCM",
+          "dept": "MKT1",
+          "isFamily": false
+        },
+        {
+          "no": 38,
+          "empCode": "Sompo",
+          "name": "Nguyen Thi Minh Phuong",
+          "office": "HN",
+          "dept": null,
+          "isFamily": false
+        },
+        {
+          "no": 39,
+          "empCode": null,
+          "name": "Nguyen Lap Son",
+          "office": "HN",
+          "dept": null,
+          "isFamily": false
+        },
+        {
+          "no": 40,
+          "empCode": null,
+          "name": "Nguyen Thi Thuan",
+          "office": "HN",
+          "dept": null,
+          "isFamily": false
+        }
+      ]
+    }
+  },
+  "roomShare": {
+    "trip1": [
+      {
+        "roomNo": 1,
+        "members": [
+          {
+            "empCode": "E539",
+            "name": "Park Mi Young",
+            "office": "HO",
+            "dept": "MKT1-KB",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 2,
+        "members": [
+          {
+            "empCode": "E045",
+            "name": "Bui Phuong Mai",
+            "office": "HO",
+            "dept": "IT",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 3,
+        "members": [
+          {
+            "empCode": "E213",
+            "name": "Nguyen Thi Hai Yen",
+            "office": "HO",
+            "dept": "GAHR",
+            "isFamily": false
+          },
+          {
+            "empCode": "E519",
+            "name": "Nguyen Thi Phuong Thao",
+            "office": "HO",
+            "dept": "GAHR",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 4,
+        "members": [
+          {
+            "empCode": "E073",
+            "name": "Pham Tuyet Nhung",
+            "office": "HO",
+            "dept": "Internal Auditing",
+            "isFamily": false
+          },
+          {
+            "empCode": "E025",
+            "name": "Vu Thi Hoang Phuong",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 5,
+        "members": [
+          {
+            "empCode": "E499",
+            "name": "Vu Van Anh",
+            "office": "HO",
+            "dept": "CP",
+            "isFamily": false
+          },
+          {
+            "empCode": "E514",
+            "name": "Tran Phuong Quynh",
+            "office": "HO",
+            "dept": "CP",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 6,
+        "members": [
+          {
+            "empCode": "E536",
+            "name": "Le Dieu Linh",
+            "office": "HO",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": "E540",
+            "name": "Nguyen Phuong Tu",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 7,
+        "members": [
+          {
+            "empCode": "E528",
+            "name": "Duong Thi Linh Linh",
+            "office": "HO",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": "E532",
+            "name": "Dang Thu Trang",
+            "office": "HO",
+            "dept": "PA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 8,
+        "members": [
+          {
+            "empCode": "E450",
+            "name": "Tran Thi Huong",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          },
+          {
+            "empCode": "E464",
+            "name": "Pham Thi Quynh",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 9,
+        "members": [
+          {
+            "empCode": "E433",
+            "name": "Khuong Thuc Hien",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          },
+          {
+            "empCode": "E537",
+            "name": "Dao Thu Ha",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 10,
+        "members": [
+          {
+            "empCode": "E527",
+            "name": "Nguyen Mai Huong",
+            "office": "HO",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E501",
+            "name": "Le Thi Van Trang",
+            "office": "HO",
+            "dept": "PA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 11,
+        "members": [
+          {
+            "empCode": "E385",
+            "name": "Nguyen Thi Thuy",
+            "office": "HO",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": "E099",
+            "name": "Nguyen Thi Thanh",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 12,
+        "members": [
+          {
+            "empCode": "E388",
+            "name": "Nguyen Thuy Duong",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E529",
+            "name": "Do Ngoc Anh",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 13,
+        "members": [
+          {
+            "empCode": "E444",
+            "name": "Tairo Sugiyama",
+            "office": "HO",
+            "dept": "Mngt",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 14,
+        "members": [
+          {
+            "empCode": "E427",
+            "name": "Nguyen Hong Minh",
+            "office": "HO",
+            "dept": "Mngt",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 15,
+        "members": [
+          {
+            "empCode": "E478",
+            "name": "Masanori Tsuji",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 16,
+        "members": [
+          {
+            "empCode": "E001",
+            "name": "Nguyen Thanh Nam",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 17,
+        "members": [
+          {
+            "empCode": "E381",
+            "name": "Tran Huy Duc",
+            "office": "HO",
+            "dept": "BD",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 18,
+        "members": [
+          {
+            "empCode": "E140",
+            "name": "Tran Hoai Nam",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E486",
+            "name": "Tran Quang Thai",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 19,
+        "members": [
+          {
+            "empCode": "E296",
+            "name": "Lai Duc Chung",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E538",
+            "name": "Nguyen Hoang The Anh",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 20,
+        "members": [
+          {
+            "empCode": "E416",
+            "name": "Nguyen Huy Khanh",
+            "office": "HO",
+            "dept": "MKT1-KB",
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Le Thanh Thao",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          },
+          {
+            "empCode": null,
+            "name": "Nguyen Huy Truong",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          },
+          {
+            "empCode": null,
+            "name": "Nguyen Minh San",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          }
+        ]
+      },
+      {
+        "roomNo": 21,
+        "members": [
+          {
+            "empCode": "E479",
+            "name": "Tamura Masashi",
+            "office": "HCM",
+            "dept": "Mngt",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 22,
+        "members": [
+          {
+            "empCode": "E507",
+            "name": "Hisano Tetsuya",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 23,
+        "members": [
+          {
+            "empCode": "E534",
+            "name": "Nguyen Duc Thang",
+            "office": "HCM",
+            "dept": "MKT1 (KB)",
+            "isFamily": false
+          },
+          {
+            "empCode": "E476",
+            "name": "Nguyen Tran Hung",
+            "office": "HCM",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 24,
+        "members": [
+          {
+            "empCode": "E543",
+            "name": "Sakai Shotaro",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 25,
+        "members": [
+          {
+            "empCode": "E270",
+            "name": "Vo Dai Quang",
+            "office": "HCM",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E155",
+            "name": "Nguyen Thanh Binh",
+            "office": "HCM",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 26,
+        "members": [
+          {
+            "empCode": "E132",
+            "name": "Le Thi Thu Thuy",
+            "office": "HCM",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Mai Ngọc Anh My",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          },
+          {
+            "empCode": "E544",
+            "name": "Nguyen Hoang Yen Nhi",
+            "office": "HCM",
+            "dept": "MKT1 (KB)",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 27,
+        "members": [
+          {
+            "empCode": "E150",
+            "name": "Le Thi Thu Phuong",
+            "office": "HCM",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Hoàng Văn Mạnh",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          },
+          {
+            "empCode": null,
+            "name": "Hoàng Phương Anh",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          },
+          {
+            "empCode": null,
+            "name": "Hoàng Nguyên Khôi",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          }
+        ]
+      },
+      {
+        "roomNo": 28,
+        "members": [
+          {
+            "empCode": "E494",
+            "name": "Tran Ha Vi",
+            "office": "HCM",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": "E426",
+            "name": "Tran Thi Thu Thao",
+            "office": "HCM",
+            "dept": "GAHR",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 29,
+        "members": [
+          {
+            "empCode": "E156",
+            "name": "Pham Dao Thuy Hang",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E481",
+            "name": "Tran Mai Linh",
+            "office": "HCM",
+            "dept": "GAHR",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 30,
+        "members": [
+          {
+            "empCode": "E496",
+            "name": "Tong Chau Viet Ha",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E496",
+            "name": "Tong Chau Thuy Lam",
+            "office": null,
+            "dept": null,
+            "isFamily": false
+          },
+          {
+            "empCode": "E541",
+            "name": "Le Thi Thuy Trang",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 31,
+        "members": [
+          {
+            "empCode": "E287",
+            "name": "Dinh Thi Hoai",
+            "office": "HCM",
+            "dept": "BD",
+            "isFamily": false
+          },
+          {
+            "empCode": "E535",
+            "name": "Nguyen Thi Kieu Oanh",
+            "office": "HCM",
+            "dept": "BD",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 32,
+        "members": [
+          {
+            "empCode": "E322",
+            "name": "Le Thi Phuong Oanh",
+            "office": "HCM",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E390",
+            "name": "Ma Thi Cam Duyen",
+            "office": "HCM",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 33,
+        "members": [
+          {
+            "empCode": "E510",
+            "name": "Le Tran Khanh Vy",
+            "office": "HCM",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Vũ Lê Khôi Nguyên",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          }
+        ]
+      },
+      {
+        "roomNo": 34,
+        "members": [
+          {
+            "empCode": "E328",
+            "name": "Liem Tu Quynh",
+            "office": "HCM",
+            "dept": "FA",
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Nguyễn Ngọc Nhã Tuệ",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          }
+        ]
+      },
+      {
+        "roomNo": 35,
+        "members": [
+          {
+            "empCode": "E447",
+            "name": "Pham Huy Minh",
+            "office": "HCM",
+            "dept": "IT",
+            "isFamily": false
+          },
+          {
+            "empCode": "E274",
+            "name": "Pham Huu Duy Phong",
+            "office": "DN",
+            "dept": "BD",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 36,
+        "members": [
+          {
+            "empCode": "E526",
+            "name": "Nguyen Thi Hoai Thanh",
+            "office": "DN",
+            "dept": "FA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E371",
+            "name": "Vo Thi Thu Thuong",
+            "office": "DN",
+            "dept": "MKT",
+            "isFamily": false
+          }
+        ]
+      }
+    ],
+    "trip2": [
+      {
+        "roomNo": 1,
+        "members": [
+          {
+            "empCode": "E413",
+            "name": "Le Quynh Trang",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 2,
+        "members": [
+          {
+            "empCode": "E329",
+            "name": "Pham Hong Nhung",
+            "office": "HO",
+            "dept": "GAHR",
+            "isFamily": false
+          },
+          {
+            "empCode": "E421",
+            "name": "Nguyen Khanh Hien",
+            "office": "HO",
+            "dept": "CP",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 3,
+        "members": [
+          {
+            "empCode": "E419",
+            "name": "Vuong Mai Linh",
+            "office": "HO",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": "E391",
+            "name": "Nguyen Le Thuy",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 4,
+        "members": [
+          {
+            "empCode": "E487",
+            "name": "Than Thi Thanh Hai",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E288",
+            "name": "Hoang Kieu Ngan",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 5,
+        "members": [
+          {
+            "empCode": "E477",
+            "name": "Ha Thu Trang",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          },
+          {
+            "empCode": "E471",
+            "name": "Ly Thi Ngoc Huyen",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 6,
+        "members": [
+          {
+            "empCode": "E492",
+            "name": "Nguyen Phuong Thao",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          },
+          {
+            "empCode": "E488",
+            "name": "Nguyen Thi Phuong Anh",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 7,
+        "members": [
+          {
+            "empCode": "E010",
+            "name": "Ngo Thi Lan Phuong",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E428",
+            "name": "Nguyen Thi Ly",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 8,
+        "members": [
+          {
+            "empCode": "E111",
+            "name": "Pham Hong Yen",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E231",
+            "name": "Bui Thi Kim Lien",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 9,
+        "members": [
+          {
+            "empCode": "E035",
+            "name": "Duong Thi Thu Nga",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E019",
+            "name": "Nguyen Thi Phuong Thanh",
+            "office": "HO",
+            "dept": "UWRI",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 10,
+        "members": [
+          {
+            "empCode": "E498",
+            "name": "Trieu Khanh Huyen",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E509",
+            "name": "Nguyen Minh Phuong",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 11,
+        "members": [
+          {
+            "empCode": "E502",
+            "name": "Nguyen Thi Ha My",
+            "office": "HO",
+            "dept": "BD",
+            "isFamily": false
+          },
+          {
+            "empCode": "E504",
+            "name": "Nguyen Thi Hong Nhung",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 12,
+        "members": [
+          {
+            "empCode": "E170",
+            "name": "Le Minh Thuy",
+            "office": "HO",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E139",
+            "name": "Tran Ha Phuong",
+            "office": "HO",
+            "dept": "PA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 13,
+        "members": [
+          {
+            "empCode": "E485",
+            "name": "Do Hong Nhung",
+            "office": "HO",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": "E520",
+            "name": "Nguyen Kim Oanh",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 14,
+        "members": [
+          {
+            "empCode": "E358",
+            "name": "Hoang Thi Anh Tho",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E500",
+            "name": "Nguyen Phuong Thao",
+            "office": "HO",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 15,
+        "members": [
+          {
+            "empCode": "E087",
+            "name": "Ngo Minh Ha",
+            "office": "HO",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E221",
+            "name": "Dang Thi Hong Mai",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 16,
+        "members": [
+          {
+            "empCode": "E533",
+            "name": "Nguyen Thi Thi",
+            "office": "HO",
+            "dept": "IT",
+            "isFamily": false
+          },
+          {
+            "empCode": "E533",
+            "name": "Lê Ngọc Bích Diệp",
+            "office": "HO",
+            "dept": null,
+            "isFamily": false
+          },
+          {
+            "empCode": "E026",
+            "name": "Ta Thi Minh Thao",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 17,
+        "members": [
+          {
+            "empCode": "E203",
+            "name": "Mai Thi Hao",
+            "office": "HO",
+            "dept": "BD",
+            "isFamily": false
+          },
+          {
+            "empCode": "E203",
+            "name": "Timmermans Ethan Gia An",
+            "office": null,
+            "dept": null,
+            "isFamily": false
+          },
+          {
+            "empCode": "E136",
+            "name": "Nguyen Cam Tu",
+            "office": "HO",
+            "dept": "BD",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 18,
+        "members": [
+          {
+            "empCode": "E454",
+            "name": "Nguyen Thi Minh Phuong",
+            "office": "HO",
+            "dept": "IT",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 19,
+        "members": [
+          {
+            "empCode": "E047",
+            "name": "Doan Duc Hanh",
+            "office": "HO",
+            "dept": "GAHR",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 20,
+        "members": [
+          {
+            "empCode": "E431",
+            "name": "Le Hoang Viet",
+            "office": "HO",
+            "dept": "IT",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 21,
+        "members": [
+          {
+            "empCode": "E002",
+            "name": "Do Quang Huy",
+            "office": "HO",
+            "dept": "Risk Management",
+            "isFamily": false
+          },
+          {
+            "empCode": "E469",
+            "name": "Quach Minh Hoang Long",
+            "office": "HO",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 22,
+        "members": [
+          {
+            "empCode": "E480",
+            "name": "Tran Minh Hai",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E468",
+            "name": "Nguyen Thai Binh",
+            "office": "HO",
+            "dept": "IT",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 23,
+        "members": [
+          {
+            "empCode": "E178",
+            "name": "Nguyen Van Minh",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E298",
+            "name": "Nong Tran Quang",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 24,
+        "members": [
+          {
+            "empCode": "E517",
+            "name": "Nguyen Tien Dau",
+            "office": "HO",
+            "dept": "GAHR",
+            "isFamily": false
+          },
+          {
+            "empCode": "E081",
+            "name": "La Duc Chinh",
+            "office": "HO",
+            "dept": "GAHR",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 25,
+        "members": [
+          {
+            "empCode": "E249",
+            "name": "Nguyen Dinh Quyen",
+            "office": "HO",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E524",
+            "name": "Banh Van Loi",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 26,
+        "members": [
+          {
+            "empCode": "E163",
+            "name": "Nguyen Huu Phuoc",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E160",
+            "name": "Do Thanh Tuan",
+            "office": "HCM",
+            "dept": "BD",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 27,
+        "members": [
+          {
+            "empCode": "E460",
+            "name": "Cao Anh Dung",
+            "office": "HCM",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E337",
+            "name": "Tran Quang Khanh",
+            "office": "HCM",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 28,
+        "members": [
+          {
+            "empCode": "E149",
+            "name": "Truong Thanh Cam Tu",
+            "office": "HCM",
+            "dept": "MKT1",
+            "isFamily": false
+          },
+          {
+            "empCode": "E204",
+            "name": "Nguyen Thi Yen Ha",
+            "office": "HCM",
+            "dept": "PA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 29,
+        "members": [
+          {
+            "empCode": "E350",
+            "name": "Nguyen Thi Hai Yen",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E327",
+            "name": "Tran Thi Tham",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 30,
+        "members": [
+          {
+            "empCode": "E490",
+            "name": "Nguyen Tran Phuong Linh",
+            "office": "HCM",
+            "dept": "MKT2",
+            "isFamily": false
+          },
+          {
+            "empCode": "E475",
+            "name": "Nguyen Huynh Yen Thuy",
+            "office": "HCM",
+            "dept": "GAHR",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 31,
+        "members": [
+          {
+            "empCode": "E354",
+            "name": "Huynh Thi Hong Nhu",
+            "office": "HCM",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E420",
+            "name": "Nguyen Thi Bich Thuy",
+            "office": "HCM",
+            "dept": "FA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 32,
+        "members": [
+          {
+            "empCode": "E467",
+            "name": "Le Thi Thanh Truc",
+            "office": "HCM",
+            "dept": "PA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E503",
+            "name": "Tran Ngoc Phuong",
+            "office": "HCM",
+            "dept": "PA",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 33,
+        "members": [
+          {
+            "empCode": "E046",
+            "name": "Tran Chau Hien",
+            "office": "HCM",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": "E031",
+            "name": "Nguyen Thi Quynh Anh",
+            "office": "HCM",
+            "dept": "Claims",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 34,
+        "members": [
+          {
+            "empCode": "E314",
+            "name": "Huynh My Duyen Hong",
+            "office": "HCM",
+            "dept": "Claims",
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Dương Ninh Đức Vũ",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          },
+          {
+            "empCode": null,
+            "name": "Dương Lam Vy",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          },
+          {
+            "empCode": null,
+            "name": "Dương Vân Nhi",
+            "office": null,
+            "dept": null,
+            "isFamily": true
+          }
+        ]
+      },
+      {
+        "roomNo": 69,
+        "members": [
+          {
+            "empCode": "E439",
+            "name": "Pham Huynh Phuong Trinh",
+            "office": "HCM",
+            "dept": "FA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E461",
+            "name": "Vo Hoai Bao Ngoc",
+            "office": "HCM",
+            "dept": "FA",
+            "isFamily": false
+          },
+          {
+            "empCode": "E457",
+            "name": "Lu Minh Anh",
+            "office": "HCM",
+            "dept": "MKT1",
+            "isFamily": false
+          }
+        ]
+      },
+      {
+        "roomNo": 72,
+        "members": [
+          {
+            "empCode": "Sompo",
+            "name": "Nguyen Thi Minh Phuong",
+            "office": "HN",
+            "dept": null,
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Nguyen Lap Son",
+            "office": "HN",
+            "dept": null,
+            "isFamily": false
+          },
+          {
+            "empCode": null,
+            "name": "Nguyen Thi Thuan",
+            "office": "HN",
+            "dept": null,
+            "isFamily": false
+          }
+        ]
+      }
+    ]
+  },
+  "travelNotices": [
+    "Personal ID: Please bring a valid ID card/passport — required for airport check-in and boarding.",
+    "Self-booked travelers: If arranging your own flight/transport, please follow the itinerary to join the group on schedule.",
+    "Clothing & essentials: Pack suitable outfits for sightseeing, swimming, and snorkeling — swimwear, sun protection (hat, sunglasses), and a spare set of clothes for wet activities.",
+    "Weather in Quy Nhon: Early September is mostly sunny, around 26–31°C, with occasional afternoon/evening showers. A light raincoat or umbrella is recommended."
+  ]
+}
