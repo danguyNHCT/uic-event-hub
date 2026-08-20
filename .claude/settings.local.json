@@ -3,7 +3,8 @@
     "allow": [
       "PowerShell(npm run2)",
       "PowerShell(npm run *)",
-      "PowerShell(npx oxlint src 2>&1 | Select-Object -Last 60)"
+      "PowerShell(npx oxlint src 2>&1 | Select-Object -Last 60)",
+      "Bash(npm run *)"
     ]
   }
 }
