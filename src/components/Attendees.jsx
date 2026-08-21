@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import ScreenHeader from './ScreenHeader';
+import PeopleFilterBar from './PeopleFilterBar';
+import { usePeopleFilter, personMatches } from '../peopleFilter';
 import { SEED_ATTENDEES } from '../seedData';
 
 const TRIP_TABS = [
@@ -9,7 +11,7 @@ const TRIP_TABS = [
 ];
 
 const SECTION_TABS = [
-  { id: 'bookedByUIC', label: { en: 'Booked by UIC', vi: 'UIC đặt vé' } },
+  { id: 'bookedByUIC', label: { en: 'Booked by company', vi: 'Công ty đặt vé' } },
   { id: 'selfBooking', label: { en: 'Self-booking', vi: 'Tự đặt vé' } },
 ];
 
@@ -36,12 +38,24 @@ export default function Attendees({ onBack }) {
   const { t } = useLanguage();
   const [trip, setTrip] = useState('trip1');
   const [section, setSection] = useState('bookedByUIC');
+  const filter = usePeopleFilter();
 
   const people = SEED_ATTENDEES[trip]?.[section] ?? [];
+  const visiblePeople = people.filter((p) => personMatches(p, filter));
 
   return (
     <div>
       <ScreenHeader title={t({ en: 'Attendees', vi: 'Người tham dự' })} onBack={onBack} />
+
+      <PeopleFilterBar
+        people={people}
+        query={filter.query}
+        onQueryChange={filter.setQuery}
+        office={filter.office}
+        onOfficeChange={filter.setOffice}
+        dept={filter.dept}
+        onDeptChange={filter.setDept}
+      />
 
       <div className="px-4 pt-3">
         <div className="flex bg-gray-100 rounded-full p-1 gap-1">
@@ -76,12 +90,17 @@ export default function Attendees({ onBack }) {
       </div>
 
       <div className="px-4 pt-2.5 pb-4 flex flex-col gap-1.5">
-        {people.map((p) => (
+        {visiblePeople.map((p) => (
           <AttendeeRow key={p.no} person={p} t={t} />
         ))}
         {people.length === 0 && (
           <p className="text-center text-sm text-gray-400 py-8">
             {t({ en: 'No one here yet', vi: 'Chưa có ai' })}
+          </p>
+        )}
+        {people.length > 0 && visiblePeople.length === 0 && (
+          <p className="text-center text-sm text-gray-400 py-8">
+            {t({ en: 'No matches', vi: 'Không tìm thấy kết quả' })}
           </p>
         )}
       </div>

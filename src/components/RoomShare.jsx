@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import ScreenHeader from './ScreenHeader';
+import PeopleFilterBar from './PeopleFilterBar';
+import { usePeopleFilter, personMatches } from '../peopleFilter';
 import { SEED_ROOM_SHARE } from '../seedData';
 
 const TRIP_TABS = [
@@ -18,12 +20,30 @@ function MemberDetail({ member, t }) {
 export default function RoomShare({ onBack }) {
   const { t } = useLanguage();
   const [trip, setTrip] = useState('trip1');
+  const filter = usePeopleFilter();
 
   const rooms = SEED_ROOM_SHARE[trip] ?? [];
+  const allMembers = rooms.flatMap((room) => room.members);
+  const isFiltering = filter.query.trim() !== '' || filter.office !== '' || filter.dept !== '';
+  const visibleRooms = isFiltering
+    ? rooms
+        .map((room) => ({ ...room, members: room.members.filter((m) => personMatches(m, filter)) }))
+        .filter((room) => room.members.length > 0)
+    : rooms;
 
   return (
     <div>
       <ScreenHeader title={t({ en: 'Room Share', vi: 'Ghép phòng' })} onBack={onBack} />
+
+      <PeopleFilterBar
+        people={allMembers}
+        query={filter.query}
+        onQueryChange={filter.setQuery}
+        office={filter.office}
+        onOfficeChange={filter.setOffice}
+        dept={filter.dept}
+        onDeptChange={filter.setDept}
+      />
 
       <div className="px-4 pt-3">
         <div className="flex bg-gray-100 rounded-full p-1 gap-1">
@@ -42,7 +62,7 @@ export default function RoomShare({ onBack }) {
       </div>
 
       <div className="px-4 pt-2.5 pb-4 flex flex-col gap-2">
-        {rooms.map((room) => (
+        {visibleRooms.map((room) => (
           <div key={room.roomNo} className="bg-white rounded-2xl shadow-sm p-3">
             <h3 className="font-bold text-[#0B2A4A] text-xs mb-1.5">
               {t({ en: 'Room', vi: 'Phòng' })} {room.roomNo}
@@ -68,6 +88,11 @@ export default function RoomShare({ onBack }) {
         {rooms.length === 0 && (
           <p className="text-center text-sm text-gray-400 py-8">
             {t({ en: 'No rooms yet', vi: 'Chưa có phòng nào' })}
+          </p>
+        )}
+        {rooms.length > 0 && visibleRooms.length === 0 && (
+          <p className="text-center text-sm text-gray-400 py-8">
+            {t({ en: 'No matches', vi: 'Không tìm thấy kết quả' })}
           </p>
         )}
       </div>

@@ -1,9 +1,21 @@
 {
   "tripInfo": {
-    "name": "UIC Company Trip 2026",
-    "destination": "Quy Nhon",
-    "dateRange": "4th - 7th September 2026",
-    "welcomeMessage": "Welcome to one of the standout events of 2026!"
+    "name": {
+      "en": "Company Trip 2026",
+      "vi": "Chuyến đi công ty 2026"
+    },
+    "destination": {
+      "en": "Quy Nhon",
+      "vi": "Quy Nhơn"
+    },
+    "dateRange": {
+      "en": "4th - 7th September 2026",
+      "vi": "4 - 7 tháng 9, 2026"
+    },
+    "welcomeMessage": {
+      "en": "Welcome to one of the standout events of 2026!",
+      "vi": "Chào mừng bạn đến với một trong những sự kiện nổi bật nhất năm 2026!"
+    }
   },
   "generalAgenda": {
     "days": [
@@ -72,7 +84,9 @@
           "time": "07:10 - 11:30",
           "group": "HCMC",
           "activity": "Arrive at Quy Nhon\nHaving Breakfast \nSightseeing tour of Ghenh Rang Tien Sa tourist area",
-          "note": "Restaurant at Phu Cat Airport"
+          "note": "Restaurant at Phu Cat Airport",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Friday\n04/09",
@@ -93,14 +107,17 @@
           "time": "12:00",
           "group": "All",
           "activity": "Lunch",
-          "note": "Restaurant: Ẩm thực Việt"
+          "note": "Restaurant: Ẩm thực Việt",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Friday\n04/09",
           "time": "14:00",
           "group": "All",
           "activity": "Hotel Check-in",
-          "note": "FLC Quy Nhơn Beach & Golf Resort"
+          "note": "FLC Quy Nhơn Beach & Golf Resort",
+          "mapsUrl": ""
         },
         {
           "date": "Friday\n04/09",
@@ -114,49 +131,61 @@
           "time": "18:30",
           "group": "All",
           "activity": "Dinner",
-          "note": "Restaurant: Hướng Dương"
+          "note": "Restaurant: Hướng Dương",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Saturday\n05/09",
           "time": "07:00",
           "group": "All",
           "activity": "Breakfast",
-          "note": "Buffet at Hotel"
+          "note": "Buffet at Hotel",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Saturday\n05/09",
           "time": "08:00",
           "group": "All",
           "activity": "Local tour to Ky Co Beach",
-          "note": "Notes: Prepare suitable outfits/ belongings for sightseeing, swimming, and snorkeling activities."
+          "note": "Notes: Prepare suitable outfits/ belongings for sightseeing, swimming, and snorkeling activities.",
+          "mapsUrl": ""
         },
         {
           "date": "Saturday\n05/09",
           "time": "11:30",
           "group": "All",
           "activity": "Lunch",
-          "note": "Local restaurant at Ky Co Beach"
+          "note": "Local restaurant at Ky Co Beach",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Saturday\n05/09",
           "time": "13:30 - 17:00",
           "group": "All",
           "activity": "Pickleball Tournament 2026",
-          "note": "FLC pickleball courts area"
+          "note": "FLC pickleball courts area",
+          "mapsUrl": ""
         },
         {
           "date": "Saturday\n05/09",
           "time": "18:30",
           "group": "All",
           "activity": "GALA Dinner",
-          "note": "FLC Ruby Hall"
+          "note": "FLC Ruby Hall",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Sunday\n06/09",
           "time": "07:00 - 11:00",
           "group": "All",
           "activity": "Breakfast & Freetime",
-          "note": "Buffet at Hotel"
+          "note": "Buffet at Hotel",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Sunday\n06/09",
@@ -170,7 +199,9 @@
           "time": "12:00",
           "group": "All",
           "activity": "Lunch",
-          "note": "- Hoai Huong Restaurant\n* After lunch\n- HCM team: go to airport\n- Hanoi team: go to shopping and wait for flght"
+          "note": "- Hoai Huong Restaurant\n* After lunch\n- HCM team: go to airport\n- Hanoi team: go to shopping and wait for flght",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Sunday\n06/09",
@@ -210,56 +241,68 @@
           "time": "8:15 - 11:30",
           "group": "All",
           "activity": "Arrive at Quy Nhon\nHaving Breakfast \nSightseeing tour of Ghenh Rang Tien Sa tourist area",
-          "note": "Restaurant at Phu Cat Airport"
+          "note": "Restaurant at Phu Cat Airport",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Saturday\n05/09",
           "time": "12:00",
           "group": "All",
           "activity": "Lunch",
-          "note": null
+          "note": null,
+          "menu": []
         },
         {
           "date": "Saturday\n05/09",
           "time": "14:00",
           "group": "All",
           "activity": "Hotel Check-in",
-          "note": "FLC Quy Nhơn Beach & Golf Resort"
+          "note": "FLC Quy Nhơn Beach & Golf Resort",
+          "mapsUrl": ""
         },
         {
           "date": "Saturday\n05/09",
           "time": "13:30 - 17:00",
           "group": "All",
           "activity": "Pickleball Tournament 2026",
-          "note": "FLC pickleball courts area"
+          "note": "FLC pickleball courts area",
+          "mapsUrl": ""
         },
         {
           "date": "Saturday\n05/09",
           "time": "18:30",
           "group": "All",
           "activity": "GALA Dinner",
-          "note": "FLC Ruby Hall"
+          "note": "FLC Ruby Hall",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Sunday\n06/09",
           "time": "07:00",
           "group": "All",
           "activity": "Breakfast",
-          "note": "Buffet at Hotel"
+          "note": "Buffet at Hotel",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Sunday\n06/09",
           "time": "08:00 - 11:30",
           "group": "All",
           "activity": "Local tour to Ky Co Beach",
-          "note": "Notes: Prepare suitable outfits/ belongings for sightseeing, swimming, and snorkeling activities."
+          "note": "Notes: Prepare suitable outfits/ belongings for sightseeing, swimming, and snorkeling activities.",
+          "mapsUrl": ""
         },
         {
           "date": "Sunday\n06/09",
           "time": "12:00",
           "group": "All",
           "activity": "Lunch",
-          "note": "Local restaurant at Ky Co Beach"
+          "note": "Local restaurant at Ky Co Beach",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Sunday\n06/09",
@@ -273,14 +316,18 @@
           "time": "18:30",
           "group": "All",
           "activity": "Dinner",
-          "note": "Restaurant: Hướng Dương"
+          "note": "Restaurant: Hướng Dương",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Monday\n07/09",
           "time": "07:00 - 10:30",
           "group": "All",
           "activity": "Breakfast & Freetime",
-          "note": "Buffet at Hotel"
+          "note": "Buffet at Hotel",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Monday\n07/09",
@@ -294,7 +341,9 @@
           "time": "12:00",
           "group": "All",
           "activity": "Lunch",
-          "note": "- Hoai Huong Restaurant\n* After lunch:\n- HCM team: go to airport\n- HN team: go to shopping and waiting for flight"
+          "note": "- Hoai Huong Restaurant\n* After lunch:\n- HCM team: go to airport\n- HN team: go to shopping and waiting for flight",
+          "mapsUrl": "",
+          "menu": []
         },
         {
           "date": "Monday\n07/09",
@@ -2760,9 +2809,25 @@
     ]
   },
   "travelNotices": [
-    "Personal ID: Please bring a valid ID card/passport — required for airport check-in and boarding.",
-    "Self-booked travelers: If arranging your own flight/transport, please follow the itinerary to join the group on schedule.",
-    "Clothing & essentials: Pack suitable outfits for sightseeing, swimming, and snorkeling — swimwear, sun protection (hat, sunglasses), and a spare set of clothes for wet activities.",
-    "Weather in Quy Nhon: Early September is mostly sunny, around 26–31°C, with occasional afternoon/evening showers. A light raincoat or umbrella is recommended."
+    {
+      "icon": "🪪",
+      "en": "Personal ID: Please bring a valid ID card/passport — required for airport check-in and boarding.",
+      "vi": "Giấy tờ tùy thân: Vui lòng mang theo CMND/CCCD hoặc hộ chiếu còn hiệu lực — bắt buộc để làm thủ tục và lên máy bay."
+    },
+    {
+      "icon": "🎫",
+      "en": "Self-booked travelers: If arranging your own flight/transport, please follow the itinerary to join the group on schedule.",
+      "vi": "Người tự đặt vé: Nếu tự sắp xếp chuyến bay/phương tiện di chuyển, vui lòng bám sát lịch trình để nhập đoàn đúng giờ."
+    },
+    {
+      "icon": "🧳",
+      "en": "Clothing & essentials: Pack suitable outfits for sightseeing, swimming, and snorkeling — swimwear, sun protection (hat, sunglasses), and a spare set of clothes for wet activities.",
+      "vi": "Trang phục & vật dụng cần thiết: Chuẩn bị trang phục phù hợp cho tham quan, bơi lội và lặn ngắm san hô — đồ bơi, vật dụng chống nắng (mũ, kính râm), và một bộ quần áo dự phòng cho các hoạt động dưới nước."
+    },
+    {
+      "icon": "🌦️",
+      "en": "Weather in Quy Nhon: Early September is mostly sunny, around 26–31°C, with occasional afternoon/evening showers. A light raincoat or umbrella is recommended.",
+      "vi": "Thời tiết tại Quy Nhơn: Đầu tháng 9 trời chủ yếu nắng, khoảng 26–31°C, thỉnh thoảng có mưa rào vào chiều/tối. Nên mang theo áo mưa mỏng hoặc ô."
+    }
   ]
 }

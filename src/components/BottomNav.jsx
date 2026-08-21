@@ -9,7 +9,7 @@ export default function BottomNav({ activeTab, onSelectTab }) {
   const { t } = useLanguage();
 
   return (
-    <nav className="sticky bottom-0 left-0 right-0 bg-white border-t border-gray-200 flex shadow-[0_-2px_8px_rgba(0,0,0,0.05)]">
+    <nav className="sticky bottom-0 left-0 right-0 z-20 bg-white border-t border-gray-200 flex shadow-[0_-2px_8px_rgba(0,0,0,0.05)] pb-[max(0.875rem,env(safe-area-inset-bottom))]">
       {TABS.map((tab) => {
         const isActive = tab.id === activeTab;
         return (

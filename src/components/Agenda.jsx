@@ -85,8 +85,70 @@ function groupRowsByDate(rows) {
   return groups;
 }
 
-function DetailedAgendaTimeline({ trip }) {
+function AgendaRow({ row }) {
   const { t } = useLanguage();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const hasMenu = row.menu && row.menu.length > 0;
+
+  return (
+    <li className="mb-3 ml-5 last:mb-0">
+      <span className="absolute -left-[7px] w-3.5 h-3.5 rounded-full bg-[#C9A227] border-2 border-white" />
+      <div className="flex items-center gap-2 mb-1 flex-wrap">
+        <span className="text-xs font-semibold text-[#3B82C4]">
+          {row.time || t({ en: 'Time TBU', vi: 'Giờ chưa cập nhật' })}
+        </span>
+        <span
+          className={`text-[10px] font-bold uppercase tracking-wide rounded-full px-2 py-0.5 ${groupColor(row.group)}`}
+        >
+          {row.group}
+        </span>
+      </div>
+      <div className="bg-white rounded-xl shadow-sm p-3">
+        {row.activity ? (
+          <div className="font-semibold text-[#0B2A4A] whitespace-pre-line">{row.activity}</div>
+        ) : (
+          <div className="text-sm italic text-gray-400">
+            {t({ en: 'Not yet updated / TBU', vi: 'Chưa cập nhật / TBU' })}
+          </div>
+        )}
+        {row.note && <div className="text-xs text-gray-500 mt-1.5 whitespace-pre-line">{row.note}</div>}
+        {(row.mapsUrl || hasMenu) && (
+          <div className="flex gap-3 mt-2">
+            {row.mapsUrl && (
+              <a
+                href={row.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-semibold text-[#3B82C4] flex items-center gap-1"
+              >
+                📍 {t({ en: 'View on map', vi: 'Xem bản đồ' })}
+              </a>
+            )}
+            {hasMenu && (
+              <button
+                onClick={() => setMenuOpen((prev) => !prev)}
+                className="text-xs font-semibold text-[#3B82C4] flex items-center gap-1"
+              >
+                🍽️ {t({ en: 'View menu', vi: 'Xem thực đơn' })}
+              </button>
+            )}
+          </div>
+        )}
+        {hasMenu && menuOpen && (
+          <ul className="mt-2 pt-2 border-t border-gray-100 flex flex-col gap-1">
+            {row.menu.map((item, idx) => (
+              <li key={idx} className="text-xs text-gray-600">
+                • {item}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </li>
+  );
+}
+
+function DetailedAgendaTimeline({ trip }) {
   const groups = groupRowsByDate(trip.rows);
 
   return (
@@ -98,31 +160,7 @@ function DetailedAgendaTimeline({ trip }) {
           </h3>
           <ol className="relative border-l-2 border-[#0B2A4A]/20 ml-2">
             {group.items.map((row, idx) => (
-              <li key={idx} className="mb-3 ml-5 last:mb-0">
-                <span className="absolute -left-[7px] w-3.5 h-3.5 rounded-full bg-[#C9A227] border-2 border-white" />
-                <div className="flex items-center gap-2 mb-1 flex-wrap">
-                  <span className="text-xs font-semibold text-[#3B82C4]">
-                    {row.time || t({ en: 'Time TBU', vi: 'Giờ chưa cập nhật' })}
-                  </span>
-                  <span
-                    className={`text-[10px] font-bold uppercase tracking-wide rounded-full px-2 py-0.5 ${groupColor(row.group)}`}
-                  >
-                    {row.group}
-                  </span>
-                </div>
-                <div className="bg-white rounded-xl shadow-sm p-3">
-                  {row.activity ? (
-                    <div className="font-semibold text-[#0B2A4A] whitespace-pre-line">{row.activity}</div>
-                  ) : (
-                    <div className="text-sm italic text-gray-400">
-                      {t({ en: 'Not yet updated / TBU', vi: 'Chưa cập nhật / TBU' })}
-                    </div>
-                  )}
-                  {row.note && (
-                    <div className="text-xs text-gray-500 mt-1.5 whitespace-pre-line">{row.note}</div>
-                  )}
-                </div>
-              </li>
+              <AgendaRow key={idx} row={row} />
             ))}
           </ol>
         </div>
