@@ -16,7 +16,10 @@ export default function PeopleFilterBar({ people, query, onQueryChange, office, 
         value={query}
         onChange={(e) => onQueryChange(e.target.value)}
         placeholder={t({ en: 'Search by name...', vi: 'Tìm theo tên...' })}
-        className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-[#0B2A4A] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3B82C4]"
+        // font-size must be an explicit >=16px value (not text-sm/1em/etc.) —
+        // iOS Safari auto-zooms the page when focusing an input rendered
+        // below 16px, regardless of the app's base font size.
+        className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-[16px] text-[#0B2A4A] shadow-sm focus:outline-none focus:ring-2 focus:ring-[#3B82C4]"
       />
       <div className="flex gap-2">
         <select

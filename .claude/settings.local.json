@@ -8,7 +8,8 @@
       "Bash(git status *)",
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5175/ --max-time 5)",
       "PowerShell(node \"C:\\\\Users\\\\Admin\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Admin-uic-event-hub\\\\55005fab-d082-416d-b149-dec9d3498a8f\\\\scratchpad\\\\add-agenda-fields.js\")",
-      "PowerShell(node -e \"const d=require\\('C:/Users/Admin/uic-event-hub/trip-data.json'\\); console.log\\('valid JSON, trip1 rows:', d.detailedAgenda.trip1.rows.length, 'trip2 rows:', d.detailedAgenda.trip2.rows.length\\); console.log\\(JSON.stringify\\(d.detailedAgenda.trip1.rows[3], null, 2\\)\\); console.log\\(JSON.stringify\\(d.detailedAgenda.trip1.rows[4], null, 2\\)\\);\")"
+      "PowerShell(node -e \"const d=require\\('C:/Users/Admin/uic-event-hub/trip-data.json'\\); console.log\\('valid JSON, trip1 rows:', d.detailedAgenda.trip1.rows.length, 'trip2 rows:', d.detailedAgenda.trip2.rows.length\\); console.log\\(JSON.stringify\\(d.detailedAgenda.trip1.rows[3], null, 2\\)\\); console.log\\(JSON.stringify\\(d.detailedAgenda.trip1.rows[4], null, 2\\)\\);\")",
+      "PowerShell(npx oxlint src 2>&1 | Select-Object -Last 40)"
     ]
   }
 }

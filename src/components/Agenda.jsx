@@ -20,28 +20,47 @@ function groupColor(group) {
   return GROUP_COLORS[group] || 'bg-gray-100 text-gray-600';
 }
 
-function GeneralAgendaCell({ text }) {
-  const lines = text.split('\n');
+function GeneralAgendaLine({ line }) {
+  const match = line.match(/^(GROUP \d):\s*(.*)$/);
+  if (match) {
+    return (
+      <div>
+        <span className="inline-block text-[10px] font-bold uppercase tracking-wide rounded px-1.5 py-0.5 mr-1 bg-[#0B2A4A]/10 text-[#0B2A4A] align-middle">
+          {match[1]}
+        </span>
+        <span className="text-xs text-gray-700 align-middle">{match[2]}</span>
+      </div>
+    );
+  }
+  return <div className="text-xs font-semibold text-[#0B2A4A]">{line}</div>;
+}
+
+// The period label centers against the FIRST content line only. When a
+// period has multiple GROUP rows stacked underneath, subsequent rows are
+// indented under the content column (via a same-width invisible spacer, so
+// they stay in sync with the label column) with no label repeated next to
+// them, and don't affect the label's vertical position.
+function GeneralAgendaRow({ period, text }) {
+  const [firstLine, ...restLines] = text.split('\n');
+
   return (
     <div className="flex flex-col gap-1.5">
-      {lines.map((line, idx) => {
-        const match = line.match(/^(GROUP \d):\s*(.*)$/);
-        if (match) {
-          return (
-            <div key={idx}>
-              <span className="inline-block text-[10px] font-bold uppercase tracking-wide rounded px-1.5 py-0.5 mr-1 bg-[#0B2A4A]/10 text-[#0B2A4A] align-middle">
-                {match[1]}
-              </span>
-              <span className="text-xs text-gray-700 align-middle">{match[2]}</span>
-            </div>
-          );
-        }
-        return (
-          <div key={idx} className="text-xs font-semibold text-[#0B2A4A]">
-            {line}
+      <div className="flex items-center gap-2">
+        <span className="text-[10px] font-semibold text-gray-400 uppercase w-20 shrink-0 whitespace-nowrap">
+          {period}
+        </span>
+        <div className="flex-1">
+          <GeneralAgendaLine line={firstLine} />
+        </div>
+      </div>
+      {restLines.map((line, idx) => (
+        <div key={idx} className="flex gap-2">
+          <span className="w-20 shrink-0" aria-hidden="true" />
+          <div className="flex-1">
+            <GeneralAgendaLine line={line} />
           </div>
-        );
-      })}
+        </div>
+      ))}
     </div>
   );
 }
@@ -56,14 +75,7 @@ function GeneralAgendaTable() {
           <h3 className="text-xs font-bold text-[#0B2A4A] mb-2">{day}</h3>
           <div className="flex flex-col gap-2">
             {GENERAL_AGENDA.rows.map((row) => (
-              <div key={row.period} className="flex gap-2">
-                <span className="text-[10px] font-semibold text-gray-400 uppercase w-14 shrink-0 pt-0.5">
-                  {row.period}
-                </span>
-                <div className="flex-1">
-                  <GeneralAgendaCell text={row.cells[dayIdx]} />
-                </div>
-              </div>
+              <GeneralAgendaRow key={row.period} period={row.period} text={row.cells[dayIdx]} />
             ))}
           </div>
         </div>
