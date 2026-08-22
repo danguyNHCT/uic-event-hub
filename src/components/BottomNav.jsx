@@ -77,30 +77,34 @@ export default function BottomNav({ activeTab, onSelectTab, isHome }) {
           <button
             key={tab.id}
             onClick={() => onSelectTab(tab.id)}
-            className={`flex-1 flex flex-col items-center transition-all duration-[250ms] ease-out ${
+            className={`relative flex-1 flex items-center justify-center transition-all duration-[250ms] ease-out ${
               isCompact ? 'py-2' : 'py-3.5'
             }`}
           >
+            {/* Pinned to the button's top edge, out of the flex flow, so it
+                never shifts and never affects the icon+text centering. */}
             <span
               aria-hidden="true"
-              className={`w-8 h-[3px] rounded-b-[3px] transition-all duration-[250ms] ease-out ${
-                isCompact ? 'mb-0.5' : 'mb-1'
-              } ${isActive ? 'bg-[#C9A227]' : 'bg-transparent'}`}
-            />
-            <span
-              aria-hidden="true"
-              className={`flex items-center justify-center overflow-hidden transition-all duration-[250ms] ease-out ${
-                isCompact ? 'h-0 opacity-0' : 'h-6 opacity-100'
+              className={`absolute top-0 left-1/2 -translate-x-1/2 w-8 h-[3px] rounded-b-[3px] transition-colors duration-[250ms] ease-out ${
+                isActive ? 'bg-[#C9A227]' : 'bg-transparent'
               }`}
-            >
-              <span className="text-2xl leading-none">{tab.icon}</span>
-            </span>
-            <span
-              className={`text-xs font-medium transition-all duration-[250ms] ease-out ${
-                isCompact ? 'mt-0' : 'mt-0.5'
-              } ${isActive ? 'text-[#0B2A4A]' : 'text-gray-400'}`}
-            >
-              {t(tab.label)}
+            />
+            <span className="flex flex-col items-center justify-center">
+              <span
+                aria-hidden="true"
+                className={`flex items-center justify-center overflow-hidden transition-all duration-[250ms] ease-out ${
+                  isCompact ? 'h-0 opacity-0' : 'h-6 opacity-100'
+                }`}
+              >
+                <span className="text-2xl leading-none">{tab.icon}</span>
+              </span>
+              <span
+                className={`text-xs font-medium transition-all duration-[250ms] ease-out ${
+                  isCompact ? 'mt-0' : 'mt-0.5'
+                } ${isActive ? 'text-[#0B2A4A]' : 'text-gray-400'}`}
+              >
+                {t(tab.label)}
+              </span>
             </span>
           </button>
         );
