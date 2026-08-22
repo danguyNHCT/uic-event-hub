@@ -1,17 +1,18 @@
 import { useLanguage } from '../LanguageContext';
+import { useTripData } from '../DataContext';
 import ScreenHeader from './ScreenHeader';
-import { DETAILED_AGENDA } from '../content';
 
 // Same schedule applies to both trips — pull it from the agenda data rather
 // than hardcoding it twice.
-function findEntry() {
-  const allRows = [...DETAILED_AGENDA.trip1.rows, ...DETAILED_AGENDA.trip2.rows];
+function findEntry(detailedAgenda) {
+  const allRows = [...detailedAgenda.trip1.rows, ...detailedAgenda.trip2.rows];
   return allRows.find((row) => row.activity === 'GALA Dinner');
 }
 
 export default function GalaNight({ onBack }) {
   const { t } = useLanguage();
-  const entry = findEntry();
+  const { detailedAgenda } = useTripData();
+  const entry = findEntry(detailedAgenda);
 
   return (
     <div>

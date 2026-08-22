@@ -1,7 +1,12 @@
 import { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
+import { useTripData } from '../DataContext';
+import { useAdmin } from '../AdminContext';
+import { useAdminRow, useAdminAddRow } from '../adminEditing';
 import ScreenHeader from './ScreenHeader';
-import { GENERAL_AGENDA, DETAILED_AGENDA } from '../content';
+import GeneralAgendaAdmin from './GeneralAgendaAdmin';
+import EditableField from './admin/EditableField';
+import { AddRowButton, DeleteRowButton, UndoButton } from './admin/AdminControls';
 
 const SUB_TABS = [
   { id: 'general', label: { en: 'General', vi: 'Tổng quan' } },
@@ -67,14 +72,14 @@ function GeneralAgendaRow({ period, text }) {
 
 // Vertical, one-day-per-card layout — avoids the horizontal scroll a
 // day-columns table would need on a phone-width viewport.
-function GeneralAgendaTable() {
+function GeneralAgendaTable({ generalAgenda }) {
   return (
     <div className="flex flex-col gap-2.5">
-      {GENERAL_AGENDA.days.map((day, dayIdx) => (
+      {generalAgenda.days.map((day, dayIdx) => (
         <div key={day} className="bg-white rounded-2xl shadow-sm p-3">
           <h3 className="text-xs font-bold text-[#0B2A4A] mb-2">{day}</h3>
           <div className="flex flex-col gap-2">
-            {GENERAL_AGENDA.rows.map((row) => (
+            {generalAgenda.rows.map((row) => (
               <GeneralAgendaRow key={row.period} period={row.period} text={row.cells[dayIdx]} />
             ))}
           </div>
@@ -97,10 +102,71 @@ function groupRowsByDate(rows) {
   return groups;
 }
 
-function AgendaRow({ row }) {
+function AgendaRow({ row, targetTab }) {
   const { t } = useLanguage();
+  const { isAdminMode } = useAdmin();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { saveField, removeRow, showUndo, undo } = useAdminRow(targetTab, row.id);
   const hasMenu = row.menu && row.menu.length > 0;
+
+  if (isAdminMode) {
+    return (
+      <li className="mb-3 ml-5 last:mb-0">
+        <span className="absolute -left-[7px] w-3.5 h-3.5 rounded-full bg-[#C9A227] border-2 border-white" />
+        <div className="bg-white rounded-xl shadow-sm p-3 flex flex-col gap-1.5">
+          <div className="flex gap-1.5 items-start">
+            <EditableField
+              value={row.startTime}
+              onSave={(v) => saveField('startTime', v)}
+              className="text-xs font-semibold text-[#3B82C4] w-16"
+              required
+              placeholder={t({ en: 'Start', vi: 'Giờ đầu' })}
+            />
+            <EditableField
+              value={row.endTime}
+              onSave={(v) => saveField('endTime', v)}
+              className="text-xs text-[#3B82C4] w-16"
+              placeholder={t({ en: 'End', vi: 'Giờ cuối' })}
+            />
+            <EditableField
+              value={row.group}
+              onSave={(v) => saveField('group', v)}
+              className="text-[10px] font-bold uppercase w-16"
+              placeholder={t({ en: 'Group', vi: 'Nhóm' })}
+            />
+            <div className="flex-1" />
+            {showUndo ? <UndoButton onUndo={undo} /> : <DeleteRowButton onDelete={removeRow} />}
+          </div>
+          <EditableField
+            value={row.activity}
+            onSave={(v) => saveField('activity', v)}
+            className="font-semibold text-[#0B2A4A]"
+            multiline
+            placeholder={t({ en: 'Activity', vi: 'Hoạt động' })}
+          />
+          <EditableField
+            value={row.note}
+            onSave={(v) => saveField('note', v)}
+            className="text-xs text-gray-500"
+            multiline
+            placeholder={t({ en: 'Note', vi: 'Ghi chú' })}
+          />
+          <EditableField
+            value={row.mapsUrl}
+            onSave={(v) => saveField('mapsUrl', v)}
+            className="text-xs text-[#3B82C4]"
+            placeholder={t({ en: 'Maps URL', vi: 'Đường dẫn bản đồ' })}
+          />
+          <EditableField
+            value={(row.menu ?? []).join('; ')}
+            onSave={(v) => saveField('menu', v)}
+            className="text-xs text-gray-500"
+            placeholder={t({ en: 'Menu items, separated by ;', vi: 'Món ăn, cách nhau bởi ;' })}
+          />
+        </div>
+      </li>
+    );
+  }
 
   return (
     <li className="mb-3 ml-5 last:mb-0">
@@ -160,8 +226,19 @@ function AgendaRow({ row }) {
   );
 }
 
-function DetailedAgendaTimeline({ trip }) {
+function DetailedAgendaTimeline({ trip, targetTab }) {
+  const { t } = useLanguage();
+  const { isAdminMode } = useAdmin();
+  const addRow = useAdminAddRow(targetTab);
   const groups = groupRowsByDate(trip.rows);
+
+  const handleAdd = (group, insertAt) => {
+    const [dayName, dateShort] = group.date.split('\n');
+    return addRow(
+      { dayName, dateShort, startTime: '', endTime: '', group: '', activity: '', note: '', mapsUrl: '', menu: '' },
+      insertAt
+    );
+  };
 
   return (
     <div className="flex flex-col gap-4">
@@ -170,11 +247,27 @@ function DetailedAgendaTimeline({ trip }) {
           <h3 className="text-sm font-bold text-[#0B2A4A] mb-1.5 whitespace-pre-line leading-snug">
             {group.date}
           </h3>
+          {isAdminMode && (
+            <div className="ml-2 mb-1.5">
+              <AddRowButton
+                onAdd={() => handleAdd(group, 'start')}
+                label={t({ en: 'Add row', vi: 'Thêm dòng' })}
+              />
+            </div>
+          )}
           <ol className="relative border-l-2 border-[#0B2A4A]/20 ml-2">
             {group.items.map((row, idx) => (
-              <AgendaRow key={idx} row={row} />
+              <AgendaRow key={row.id ?? idx} row={row} targetTab={targetTab} />
             ))}
           </ol>
+          {isAdminMode && (
+            <div className="ml-2 mt-1.5">
+              <AddRowButton
+                onAdd={() => handleAdd(group, 'end')}
+                label={t({ en: 'Add row', vi: 'Thêm dòng' })}
+              />
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -183,6 +276,8 @@ function DetailedAgendaTimeline({ trip }) {
 
 export default function Agenda({ onBack }) {
   const { t } = useLanguage();
+  const { generalAgenda, detailedAgenda } = useTripData();
+  const { isAdminMode } = useAdmin();
   const [subTab, setSubTab] = useState('general');
 
   return (
@@ -206,9 +301,10 @@ export default function Agenda({ onBack }) {
       </div>
 
       <div className="px-4 pt-3 pb-4">
-        {subTab === 'general' && <GeneralAgendaTable />}
-        {subTab === 'trip1' && <DetailedAgendaTimeline trip={DETAILED_AGENDA.trip1} />}
-        {subTab === 'trip2' && <DetailedAgendaTimeline trip={DETAILED_AGENDA.trip2} />}
+        {subTab === 'general' &&
+          (isAdminMode ? <GeneralAgendaAdmin /> : <GeneralAgendaTable generalAgenda={generalAgenda} />)}
+        {subTab === 'trip1' && <DetailedAgendaTimeline trip={detailedAgenda.trip1} targetTab="DetailedAgenda_Trip1" />}
+        {subTab === 'trip2' && <DetailedAgendaTimeline trip={detailedAgenda.trip2} targetTab="DetailedAgenda_Trip2" />}
       </div>
     </div>
   );

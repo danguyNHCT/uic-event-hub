@@ -10,7 +10,8 @@
 
 import { useState } from 'react';
 import { LanguageProvider } from './LanguageContext';
-import { useAutoReload } from './hooks/useAutoReload';
+import { DataProvider } from './DataContext';
+import { AdminProvider } from './AdminContext';
 import BottomNav from './components/BottomNav';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -76,11 +77,13 @@ function AppShell() {
 }
 
 export default function App() {
-  useAutoReload();
-
   return (
     <LanguageProvider>
-      <AppShell />
+      <DataProvider>
+        <AdminProvider>
+          <AppShell />
+        </AdminProvider>
+      </DataProvider>
     </LanguageProvider>
   );
 }

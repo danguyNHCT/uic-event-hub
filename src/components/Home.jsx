@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { useLanguage } from '../LanguageContext';
+import { useTripData } from '../DataContext';
 import Header from './Header';
-import { TRIP_INFO, DETAILED_AGENDA } from '../content';
+import AnnouncementsBanner from './AnnouncementsBanner';
+import { TRIP_INFO } from '../content';
 
 const GRID_TILES = [
   { id: 'agenda', icon: '📅', label: { en: 'Agenda', vi: 'Chương trình' } },
@@ -31,8 +33,8 @@ function getEventStartMs(row) {
   return Date.UTC(EVENT_YEAR, month - 1, day, hour - HANOI_UTC_OFFSET_HOURS, minute);
 }
 
-function getUpcomingEvents(nowMs) {
-  const allRows = [...DETAILED_AGENDA.trip1.rows, ...DETAILED_AGENDA.trip2.rows];
+function getUpcomingEvents(detailedAgenda, nowMs) {
+  const allRows = [...detailedAgenda.trip1.rows, ...detailedAgenda.trip2.rows];
   const seen = new Set();
   const upcoming = [];
   for (const row of allRows) {
@@ -73,6 +75,7 @@ function UpcomingNow({ events }) {
 
 export default function Home({ onNavigateTile }) {
   const { t } = useLanguage();
+  const { detailedAgenda } = useTripData();
   const [nowMs, setNowMs] = useState(() => Date.now());
 
   useEffect(() => {
@@ -80,11 +83,13 @@ export default function Home({ onNavigateTile }) {
     return () => clearInterval(intervalId);
   }, []);
 
-  const upcomingEvents = getUpcomingEvents(nowMs);
+  const upcomingEvents = getUpcomingEvents(detailedAgenda, nowMs);
 
   return (
     <div>
       <Header title={t(TRIP_INFO.name)} subtitle={`${t(TRIP_INFO.dateRange)} · ${t(TRIP_INFO.destination)}`} />
+
+      <AnnouncementsBanner />
 
       <div className="px-4 pt-3">
         <p className="text-xs text-gray-500 leading-relaxed">{t(TRIP_INFO.welcomeMessage)}</p>

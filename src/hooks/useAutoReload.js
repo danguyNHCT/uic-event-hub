@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const VERSION_URL = '/version.json';
 const POLL_INTERVAL_MS = 60_000;
@@ -13,7 +13,14 @@ async function fetchBuildTime() {
 // Polls /version.json and silently reloads the page when the build timestamp
 // changes, so users who leave the app open on their phone pick up new
 // deploys without needing to manually refresh.
-export function useAutoReload() {
+//
+// `onPoll` (optional) is called on every tick of the SAME ~60s interval —
+// other parts of the app (e.g. the Apps Script data refresh) hook into this
+// single timer instead of running their own parallel one.
+export function useAutoReload(onPoll) {
+  const onPollRef = useRef(onPoll);
+  onPollRef.current = onPoll;
+
   useEffect(() => {
     let initialBuildTime = null;
     let cancelled = false;
@@ -25,6 +32,8 @@ export function useAutoReload() {
       .catch(() => {});
 
     const intervalId = setInterval(() => {
+      onPollRef.current?.();
+
       if (initialBuildTime === null) return;
       fetchBuildTime()
         .then((buildTime) => {
