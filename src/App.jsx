@@ -11,7 +11,7 @@
 import { useState } from 'react';
 import { LanguageProvider } from './LanguageContext';
 import { DataProvider } from './DataContext';
-import { AdminProvider } from './AdminContext';
+import { AdminProvider, useAdmin } from './AdminContext';
 import BottomNav from './components/BottomNav';
 import Home from './components/Home';
 import Contact from './components/Contact';
@@ -32,6 +32,15 @@ const SUB_SCREENS = {
   roomshare: RoomShare,
   travel: TravelNotices,
 };
+
+// Static (non-pulsing) pink border pinned to the viewport for the entire
+// duration of Admin Edit Mode — a persistent visual reminder that edits are
+// live, independent of scroll position.
+function AdminModeBorder() {
+  const { isAdminMode } = useAdmin();
+  if (!isAdminMode) return null;
+  return <div className="fixed inset-0 pointer-events-none z-[9999] border-[5px] border-[#F9C6D3]" />;
+}
 
 function AppShell() {
   const [tab, setTab] = useState('home');
@@ -71,6 +80,7 @@ function AppShell() {
 
   return (
     <div className="min-h-screen bg-[#F3F1EA] flex justify-center">
+      <AdminModeBorder />
       <div className="w-full max-w-[480px] min-h-screen bg-[#F3F1EA] flex flex-col">
         <div className="flex-1 pb-2">{content}</div>
         <BottomNav

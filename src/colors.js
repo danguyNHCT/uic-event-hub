@@ -43,4 +43,9 @@ export const COLORS = {
   group1Text: '#185FA5',
   group2Bg: '#DDEEF0',
   group2Text: '#0F6E56',
+
+  // Cảnh báo (Thông báo khẩn và các cảnh báo khác trong tương lai) — cố ý
+  // đậm và khác biệt rõ so với badgeGoldBg để không bị nhầm là icon trang trí
+  warningBg: '#EF9F27',
+  warningText: '#412402',
 };

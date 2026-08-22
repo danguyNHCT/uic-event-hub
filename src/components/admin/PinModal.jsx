@@ -1,6 +1,8 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../../LanguageContext';
 import { useAdmin } from '../../AdminContext';
+
+const PIN_LENGTH = 4;
 
 export default function PinModal({ onClose }) {
   const { t } = useLanguage();
@@ -8,6 +10,17 @@ export default function PinModal({ onClose }) {
   const [pin, setPin] = useState('');
   const [error, setError] = useState(false);
   const [checking, setChecking] = useState(false);
+  const scrollYRef = useRef(window.scrollY);
+
+  // Restores the page's scroll position to where it was before this modal
+  // opened, and blurs whatever input still has focus first — otherwise the
+  // mobile keyboard closing (or the input's own focus) makes the browser
+  // auto-scroll/crop the home screen right after Edit Mode is entered.
+  const closeAndRestoreScroll = () => {
+    document.activeElement?.blur();
+    onClose();
+    requestAnimationFrame(() => window.scrollTo(0, scrollYRef.current));
+  };
 
   const handleSubmit = async () => {
     if (!pin || checking) return;
@@ -15,11 +28,20 @@ export default function PinModal({ onClose }) {
     const ok = await unlock(pin);
     setChecking(false);
     if (ok) {
-      onClose();
+      closeAndRestoreScroll();
     } else {
       setError(true);
     }
   };
+
+  // Auto-submit once the PIN reaches its expected length, so admins don't
+  // need an extra tap on "Unlock" after typing the last digit.
+  useEffect(() => {
+    if (pin.length === PIN_LENGTH) {
+      handleSubmit();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pin]);
 
   return (
     <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center px-6">
@@ -45,7 +67,7 @@ export default function PinModal({ onClose }) {
         )}
         <div className="flex gap-2 mt-4">
           <button
-            onClick={onClose}
+            onClick={closeAndRestoreScroll}
             className="flex-1 rounded-xl py-2.5 text-sm font-semibold text-gray-500 bg-gray-100"
           >
             {t({ en: 'Cancel', vi: 'Hủy' })}

@@ -32,7 +32,7 @@ function MemberRow({ member, targetTab }) {
 
   if (!isAdminMode) {
     return (
-      <div className="flex items-center justify-between text-xs bg-gray-50 rounded-lg px-2.5 py-1.5">
+      <div className="flex items-center justify-between text-xs bg-[#F3F1EA] rounded-lg px-2.5 py-1.5">
         <div className="min-w-0">
           <div className="font-semibold text-[#0B2A4A] truncate">{member.name}</div>
           <div className="text-gray-500 mt-0.5 truncate">
@@ -44,7 +44,7 @@ function MemberRow({ member, targetTab }) {
   }
 
   return (
-    <div className="flex items-start gap-2 text-xs bg-gray-50 rounded-lg px-2.5 py-1.5">
+    <div className="flex items-start gap-2 text-xs bg-[#F3F1EA] rounded-lg px-2.5 py-1.5">
       <div className="min-w-0 flex-1 grid grid-cols-2 gap-1">
         <EditableField
           value={member.name}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useAdmin } from '../AdminContext';
 import { useTripData } from '../DataContext';
+import { COLORS } from '../colors';
 import AnnouncementsManager from './AnnouncementsManager';
 
 function isActive(announcement, nowMs) {
@@ -45,7 +46,8 @@ export default function AnnouncementsBanner() {
           {active.map((a) => (
             <div
               key={a.id}
-              className="rounded-2xl shadow-sm p-3 bg-[#0B2A4A] text-white flex items-start gap-2"
+              className="rounded-2xl shadow-sm p-3 flex items-start gap-2"
+              style={{ backgroundColor: COLORS.warningBg, color: COLORS.warningText }}
             >
               <span className="text-base leading-none">📢</span>
               <p className="text-sm font-semibold whitespace-pre-line">{a.content}</p>

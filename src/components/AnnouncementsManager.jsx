@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useLanguage } from '../LanguageContext';
 import { useTripData } from '../DataContext';
 import { useAdminAddRow, useAdminRow } from '../adminEditing';
+import { FIXED_TRIP_DATES } from '../content';
 import { DeleteRowButton, UndoButton } from './admin/AdminControls';
 
 const TARGET_TAB = 'Announcements';
@@ -15,6 +16,15 @@ function hanoiLocalToIso(datetimeLocalValue) {
   const [y, m, d] = datePart.split('-').map(Number);
   const [h, min] = timePart.split(':').map(Number);
   return new Date(Date.UTC(y, m - 1, d, h - 7, min)).toISOString();
+}
+
+// Combines a FIXED_TRIP_DATES `isoDate` with a <input type="time"> value
+// into the same "YYYY-MM-DDTHH:mm" shape hanoiLocalToIso already expects.
+// A blank time means "not set" (kept blank), matching the previous
+// datetime-local behavior where leaving the field empty meant unset/indefinite.
+function combineDateTime(isoDate, timeOfDay) {
+  if (!timeOfDay) return '';
+  return `${isoDate}T${timeOfDay}`;
 }
 
 function AnnouncementRow({ announcement }) {
@@ -44,22 +54,28 @@ export default function AnnouncementsManager({ onClose }) {
   const addRow = useAdminAddRow(TARGET_TAB);
 
   const [startNow, setStartNow] = useState(true);
-  const [startLocal, setStartLocal] = useState('');
-  const [endLocal, setEndLocal] = useState('');
+  const [startDate, setStartDate] = useState(FIXED_TRIP_DATES[0].isoDate);
+  const [startTimeOfDay, setStartTimeOfDay] = useState('');
+  const [endDate, setEndDate] = useState(FIXED_TRIP_DATES[0].isoDate);
+  const [endTimeOfDay, setEndTimeOfDay] = useState('');
   const [content, setContent] = useState('');
   const [submitting, setSubmitting] = useState(false);
 
   const handleCreate = async () => {
     if (!content.trim() || submitting) return;
     setSubmitting(true);
-    const startTime = startNow ? new Date().toISOString() : hanoiLocalToIso(startLocal);
-    const endTime = hanoiLocalToIso(endLocal);
+    const startTime = startNow
+      ? new Date().toISOString()
+      : hanoiLocalToIso(combineDateTime(startDate, startTimeOfDay));
+    const endTime = hanoiLocalToIso(combineDateTime(endDate, endTimeOfDay));
     const ok = await addRow({ content: content.trim(), startTime, endTime }, 'end');
     setSubmitting(false);
     if (ok) {
       setContent('');
-      setStartLocal('');
-      setEndLocal('');
+      setStartTimeOfDay('');
+      setEndTimeOfDay('');
+      setStartDate(FIXED_TRIP_DATES[0].isoDate);
+      setEndDate(FIXED_TRIP_DATES[0].isoDate);
       setStartNow(true);
     }
   };
@@ -82,26 +98,58 @@ export default function AnnouncementsManager({ onClose }) {
             {t({ en: 'Start now', vi: 'Ngay bây giờ' })}
           </label>
           {!startNow && (
-            <div>
-              <label className="text-[10px] text-gray-500">{t({ en: 'Start time', vi: 'Giờ bắt đầu' })}</label>
+            <div className="flex gap-1.5">
+              <div className="flex-1">
+                <label className="text-[10px] text-gray-500">{t({ en: 'Start date', vi: 'Ngày bắt đầu' })}</label>
+                <select
+                  value={startDate}
+                  onChange={(e) => setStartDate(e.target.value)}
+                  className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs mt-0.5"
+                >
+                  {FIXED_TRIP_DATES.map((d) => (
+                    <option key={d.isoDate} value={d.isoDate}>
+                      {d.dayName} {d.dateShort}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex-1">
+                <label className="text-[10px] text-gray-500">{t({ en: 'Start time', vi: 'Giờ bắt đầu' })}</label>
+                <input
+                  type="time"
+                  value={startTimeOfDay}
+                  onChange={(e) => setStartTimeOfDay(e.target.value)}
+                  className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs mt-0.5"
+                />
+              </div>
+            </div>
+          )}
+          <div className="flex gap-1.5">
+            <div className="flex-1">
+              <label className="text-[10px] text-gray-500">{t({ en: 'End date', vi: 'Ngày kết thúc' })}</label>
+              <select
+                value={endDate}
+                onChange={(e) => setEndDate(e.target.value)}
+                className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs mt-0.5"
+              >
+                {FIXED_TRIP_DATES.map((d) => (
+                  <option key={d.isoDate} value={d.isoDate}>
+                    {d.dayName} {d.dateShort}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="flex-1">
+              <label className="text-[10px] text-gray-500">
+                {t({ en: 'End time (blank = indefinite)', vi: 'Giờ kết thúc (để trống = vô thời hạn)' })}
+              </label>
               <input
-                type="datetime-local"
-                value={startLocal}
-                onChange={(e) => setStartLocal(e.target.value)}
+                type="time"
+                value={endTimeOfDay}
+                onChange={(e) => setEndTimeOfDay(e.target.value)}
                 className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs mt-0.5"
               />
             </div>
-          )}
-          <div>
-            <label className="text-[10px] text-gray-500">
-              {t({ en: 'End time (blank = indefinite)', vi: 'Giờ kết thúc (để trống = vô thời hạn)' })}
-            </label>
-            <input
-              type="datetime-local"
-              value={endLocal}
-              onChange={(e) => setEndLocal(e.target.value)}
-              className="w-full rounded-lg border border-gray-200 px-2 py-1.5 text-xs mt-0.5"
-            />
           </div>
           <textarea
             value={content}

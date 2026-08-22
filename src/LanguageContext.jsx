@@ -2,10 +2,10 @@ import { createContext, useContext, useState } from 'react';
 
 const LanguageContext = createContext(null);
 
-// Default language is Vietnamese, per spec. Toggle is in-memory React state
+// Default language is English, per spec. Toggle is in-memory React state
 // only (no localStorage), so it resets on reload — that's expected.
 export function LanguageProvider({ children }) {
-  const [lang, setLang] = useState('vi');
+  const [lang, setLang] = useState('en');
 
   const toggleLang = () => setLang((prev) => (prev === 'vi' ? 'en' : 'vi'));
 

@@ -12,7 +12,12 @@ export function useAdminRow(targetTab, rowId) {
 
   const saveField = useCallback(
     async (field, value) => {
-      const result = await updateRow(targetTab, rowId, { [field]: value });
+      // `field` may be a plain field name (paired with `value`) or an object
+      // of multiple fields to save together in one request — needed when two
+      // fields (e.g. dayName + dateShort) must change atomically from a
+      // single control.
+      const rowData = typeof field === 'object' && field !== null ? field : { [field]: value };
+      const result = await updateRow(targetTab, rowId, rowData);
       if (result?.success) {
         setLastEdit({ targetTab, rowId, editHistoryId: result.editHistoryId });
         await refresh();

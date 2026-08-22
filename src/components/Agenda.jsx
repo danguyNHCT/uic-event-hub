@@ -3,10 +3,12 @@ import { useLanguage } from '../LanguageContext';
 import { useTripData } from '../DataContext';
 import { useAdmin } from '../AdminContext';
 import { useAdminRow, useAdminAddRow } from '../adminEditing';
+import { FIXED_TRIP_DATES } from '../content';
 import ScreenHeader from './ScreenHeader';
 import GeneralAgendaAdmin from './GeneralAgendaAdmin';
 import EditableField from './admin/EditableField';
 import { AddRowButton, DeleteRowButton, UndoButton } from './admin/AdminControls';
+import { parseInlineLinks } from '../utils/parseInlineLinks';
 
 const SUB_TABS = [
   { id: 'general', label: { en: 'General', vi: 'Tổng quan' } },
@@ -122,19 +124,32 @@ function AgendaRow({ row, targetTab }) {
       <li className="mb-3 ml-5 last:mb-0">
         <span className="absolute -left-[7px] w-3.5 h-3.5 rounded-full bg-[#C9A227] border-2 border-white" />
         <div className="bg-white rounded-xl shadow-sm p-3 flex flex-col gap-1.5">
-          <div className="flex gap-1.5 items-start">
-            <EditableField
-              value={row.startTime}
-              onSave={(v) => saveField('startTime', v)}
-              className="text-xs font-semibold text-[#3B82C4] w-16"
-              required
-              placeholder={t({ en: 'Start', vi: 'Giờ đầu' })}
+          <div className="flex gap-1.5 items-start flex-wrap">
+            <select
+              value={row.dateShort ?? ''}
+              onChange={(e) => {
+                const entry = FIXED_TRIP_DATES.find((d) => d.dateShort === e.target.value);
+                if (entry) saveField({ dayName: entry.dayName, dateShort: entry.dateShort });
+              }}
+              className="text-[11px] rounded border border-gray-200 px-1 py-1"
+            >
+              {FIXED_TRIP_DATES.map((d) => (
+                <option key={d.dateShort} value={d.dateShort}>
+                  {d.dayName} {d.dateShort}
+                </option>
+              ))}
+            </select>
+            <input
+              type="time"
+              value={row.startTime || ''}
+              onChange={(e) => saveField('startTime', e.target.value)}
+              className="text-xs font-semibold text-[#3B82C4] rounded border border-gray-200 px-1 py-1 w-[6.5rem]"
             />
-            <EditableField
-              value={row.endTime}
-              onSave={(v) => saveField('endTime', v)}
-              className="text-xs text-[#3B82C4] w-16"
-              placeholder={t({ en: 'End', vi: 'Giờ cuối' })}
+            <input
+              type="time"
+              value={row.endTime || ''}
+              onChange={(e) => saveField('endTime', e.target.value)}
+              className="text-xs text-[#3B82C4] rounded border border-gray-200 px-1 py-1 w-[6.5rem]"
             />
             <EditableField
               value={row.group}
@@ -150,14 +165,20 @@ function AgendaRow({ row, targetTab }) {
             onSave={(v) => saveField('activity', v)}
             className="font-semibold text-[#0B2A4A]"
             multiline
-            placeholder={t({ en: 'Activity', vi: 'Hoạt động' })}
+            placeholder={t({
+              en: 'Activity, use [link name](url) to insert a link',
+              vi: 'Hoạt động, dùng [tên link](url) để chèn link',
+            })}
           />
           <EditableField
             value={row.note}
             onSave={(v) => saveField('note', v)}
             className="text-xs text-gray-500"
             multiline
-            placeholder={t({ en: 'Note', vi: 'Ghi chú' })}
+            placeholder={t({
+              en: 'Note, use [link name](url) to insert a link',
+              vi: 'Ghi chú, dùng [tên link](url) để chèn link',
+            })}
           />
           <EditableField
             value={row.mapsUrl}
@@ -191,13 +212,15 @@ function AgendaRow({ row, targetTab }) {
       </div>
       <div className="bg-[#FCFAF5] rounded-xl border border-[#E3D9B4] p-3">
         {row.activity ? (
-          <div className="font-semibold text-[#0B2A4A] whitespace-pre-line">{row.activity}</div>
+          <div className="font-semibold text-[#0B2A4A] whitespace-pre-line">{parseInlineLinks(row.activity)}</div>
         ) : (
           <div className="text-sm italic text-gray-400">
             {t({ en: 'Not yet updated / TBU', vi: 'Chưa cập nhật / TBU' })}
           </div>
         )}
-        {row.note && <div className="text-xs text-gray-500 mt-1.5 whitespace-pre-line">{row.note}</div>}
+        {row.note && (
+          <div className="text-xs text-gray-500 mt-1.5 whitespace-pre-line">{parseInlineLinks(row.note)}</div>
+        )}
         {(row.mapsUrl || hasMenu) && (
           <div className="flex gap-3 mt-2">
             {row.mapsUrl && (
