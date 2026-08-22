@@ -70,8 +70,8 @@ function AppShell() {
   }
 
   return (
-    <div className="min-h-screen bg-[#F7F8FA] flex justify-center">
-      <div className="w-full max-w-[480px] min-h-screen bg-[#F7F8FA] flex flex-col">
+    <div className="min-h-screen bg-[#F3F1EA] flex justify-center">
+      <div className="w-full max-w-[480px] min-h-screen bg-[#F3F1EA] flex flex-col">
         <div className="flex-1 pb-2">{content}</div>
         <BottomNav
           activeTab={subScreen ? 'home' : tab}

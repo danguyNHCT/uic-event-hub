@@ -14,7 +14,7 @@ function NoticeCard({ notice, idx }) {
   const { saveField, removeRow, showUndo, undo } = useAdminRow(TARGET_TAB, notice.id);
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-3.5 flex gap-3 items-start">
+    <div className="bg-[#FCFAF5] rounded-2xl border border-[#E3D9B4] p-3.5 flex gap-3 items-start">
       <span
         className={`w-9 h-9 rounded-full flex items-center justify-center text-base shrink-0 ${
           idx % 2 === 0 ? 'bg-[#C9A227]/15' : 'bg-[#3B82C4]/15'

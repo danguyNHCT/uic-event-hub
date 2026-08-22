@@ -89,7 +89,7 @@ function RoomCard({ room, targetTab, onAddMember }) {
   const { isAdminMode } = useAdmin();
 
   return (
-    <div className="bg-white rounded-2xl shadow-sm p-3">
+    <div className="bg-[#FCFAF5] rounded-2xl border border-[#E3D9B4] p-3">
       <h3 className="font-bold text-[#0B2A4A] text-xs mb-1.5">
         {t({ en: 'Room', vi: 'Phòng' })} {room.roomNo}
       </h3>

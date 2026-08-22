@@ -22,7 +22,7 @@ export default function GalaNight({ onBack }) {
           {t({ en: 'Same schedule for both Trip 1 and Trip 2', vi: 'Lịch giống nhau cho cả Đợt 1 và Đợt 2' })}
         </p>
         {entry ? (
-          <div className="bg-white rounded-2xl shadow-sm p-4">
+          <div className="bg-[#FCFAF5] rounded-2xl border border-[#E3D9B4] p-4">
             <div className="text-xs font-semibold text-[#3B82C4] mb-1">
               🎉 {t({ en: 'Saturday 5 Sep', vi: 'Thứ Bảy 05/09' })}
             </div>

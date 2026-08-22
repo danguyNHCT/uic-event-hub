@@ -22,4 +22,25 @@ export const COLORS = {
   skyBlue: '#3B82C4',     // cool accent — interactive elements, links, focus
   background: '#F7F8FA',  // page/content background
   textDark: '#0B2A4A',    // primary text color
+
+  // Nền trang (áp dụng toàn app, thay thế nền trắng hiện tại)
+  pageBackground: '#F3F1EA',
+
+  // Tile trang chủ & card nội dung trang con
+  cardBackground: '#FCFAF5',
+  cardBorder: '#E3D9B4',
+
+  // Icon-badge nhóm 1 (skyBlue) — dùng cho: Chương trình, Chương trình thể thao, Ghép phòng
+  badgeSkyBlueBg: '#E6F1FB',
+  badgeSkyBlueIcon: '#185FA5',
+
+  // Icon-badge nhóm 2 (gold) — dùng cho: Người tham dự, Đêm Gala, Lưu ý di chuyển
+  badgeGoldBg: '#FAEEDA',
+  badgeGoldIcon: '#854F0B',
+
+  // Badge GROUP 1 / GROUP 2 trong trang Chương trình
+  group1Bg: '#E6F1FB',
+  group1Text: '#185FA5',
+  group2Bg: '#DDEEF0',
+  group2Text: '#0F6E56',
 };

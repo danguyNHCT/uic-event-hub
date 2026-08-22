@@ -25,12 +25,20 @@ function groupColor(group) {
   return GROUP_COLORS[group] || 'bg-gray-100 text-gray-600';
 }
 
+const GENERAL_GROUP_COLORS = {
+  'GROUP 1': 'bg-[#E6F1FB] text-[#185FA5]',
+  'GROUP 2': 'bg-[#DDEEF0] text-[#0F6E56]',
+};
+
 function GeneralAgendaLine({ line }) {
   const match = line.match(/^(GROUP \d):\s*(.*)$/);
   if (match) {
+    const badgeColor = GENERAL_GROUP_COLORS[match[1]] || 'bg-[#0B2A4A]/10 text-[#0B2A4A]';
     return (
       <div>
-        <span className="inline-block text-[10px] font-bold uppercase tracking-wide rounded px-1.5 py-0.5 mr-1 bg-[#0B2A4A]/10 text-[#0B2A4A] align-middle">
+        <span
+          className={`inline-block text-[10px] font-bold uppercase tracking-wide rounded px-1.5 py-0.5 mr-1 align-middle ${badgeColor}`}
+        >
           {match[1]}
         </span>
         <span className="text-xs text-gray-700 align-middle">{match[2]}</span>
@@ -76,7 +84,7 @@ function GeneralAgendaTable({ generalAgenda }) {
   return (
     <div className="flex flex-col gap-2.5">
       {generalAgenda.days.map((day, dayIdx) => (
-        <div key={day} className="bg-white rounded-2xl shadow-sm p-3">
+        <div key={day} className="bg-[#FCFAF5] rounded-2xl border border-[#E3D9B4] p-3">
           <h3 className="text-xs font-bold text-[#0B2A4A] mb-2">{day}</h3>
           <div className="flex flex-col gap-2">
             {generalAgenda.rows.map((row) => (
@@ -181,7 +189,7 @@ function AgendaRow({ row, targetTab }) {
           {row.group}
         </span>
       </div>
-      <div className="bg-white rounded-xl shadow-sm p-3">
+      <div className="bg-[#FCFAF5] rounded-xl border border-[#E3D9B4] p-3">
         {row.activity ? (
           <div className="font-semibold text-[#0B2A4A] whitespace-pre-line">{row.activity}</div>
         ) : (

@@ -96,7 +96,13 @@ export default function BottomNav({ activeTab, onSelectTab, isHome }) {
                   isCompact ? 'h-0 opacity-0' : 'h-6 opacity-100'
                 }`}
               >
-                <span className="text-2xl leading-none">{tab.icon}</span>
+                <span
+                  className={`w-6 h-6 rounded-full flex items-center justify-center text-sm leading-none ${
+                    tab.id === 'home' ? 'bg-[#E6F1FB] text-[#185FA5]' : 'bg-[#FAEEDA] text-[#854F0B]'
+                  }`}
+                >
+                  {tab.icon}
+                </span>
               </span>
               <span
                 className={`text-xs font-medium transition-all duration-[250ms] ease-out ${

@@ -33,7 +33,7 @@ function AttendeeRow({ person, targetTab }) {
       ? t({ en: 'Family', vi: 'Gia đình' })
       : [person.office, person.dept].filter(Boolean).join(' · ') || '–';
     return (
-      <div className="flex items-center gap-2.5 bg-white rounded-xl px-3 py-2 shadow-sm">
+      <div className="flex items-center gap-2.5 bg-[#FCFAF5] rounded-xl px-3 py-2 border border-[#E3D9B4]">
         <span className="text-[11px] text-gray-400 w-5 shrink-0 text-right">{person.no}</span>
         <div className="min-w-0 flex-1">
           <div className="text-xs font-semibold text-[#0B2A4A] truncate">{person.name}</div>

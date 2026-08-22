@@ -106,11 +106,11 @@ export default function Home({ onNavigateTile }) {
             <button
               key={tile.id}
               onClick={() => onNavigateTile(tile.id)}
-              className="rounded-2xl shadow-sm p-3 text-left bg-[#0B2A4A] text-white flex flex-col gap-2 aspect-[4/3] justify-between"
+              className="rounded-2xl shadow-sm p-3 text-left bg-[#FCFAF5] border border-[#E3D9B4] text-[#0B2A4A] flex flex-col gap-2 aspect-[4/3] justify-between"
             >
               <span
                 className={`w-8 h-8 rounded-full flex items-center justify-center text-base ${
-                  idx % 2 === 0 ? 'bg-[#C9A227]/40' : 'bg-[#3B82C4]/40'
+                  idx % 2 === 0 ? 'bg-[#E6F1FB] text-[#185FA5]' : 'bg-[#FAEEDA] text-[#854F0B]'
                 }`}
               >
                 {tile.icon}
