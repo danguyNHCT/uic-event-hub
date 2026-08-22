@@ -40,15 +40,18 @@ function AppShell() {
   const handleSelectTab = (nextTab) => {
     setSubScreen(null);
     setTab(nextTab);
+    window.scrollTo(0, 0);
   };
 
   const handleNavigateTile = (screenId) => {
     setSubScreen(screenId);
+    window.scrollTo(0, 0);
   };
 
   const handleBackToHome = () => {
     setSubScreen(null);
     setTab('home');
+    window.scrollTo(0, 0);
   };
 
   let content;
@@ -70,7 +73,11 @@ function AppShell() {
     <div className="min-h-screen bg-[#F7F8FA] flex justify-center">
       <div className="w-full max-w-[480px] min-h-screen bg-[#F7F8FA] flex flex-col">
         <div className="flex-1 pb-2">{content}</div>
-        <BottomNav activeTab={subScreen ? 'home' : tab} onSelectTab={handleSelectTab} />
+        <BottomNav
+          activeTab={subScreen ? 'home' : tab}
+          onSelectTab={handleSelectTab}
+          isHome={!subScreen && tab === 'home'}
+        />
       </div>
     </div>
   );
